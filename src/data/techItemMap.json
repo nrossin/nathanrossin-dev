@@ -1,0 +1,86 @@
+{
+  "react":      {
+    "label":       "React",
+    "icon":        "logos:react",
+    "url":         "https://react.dev/",
+    "description": "A JavaScript library for building fast, interactive user interfaces."
+  },
+  "java":       {
+    "label":       "Java",
+    "icon":        "logos:java",
+    "url":         "https://dev.java/",
+    "description": "A high-level, class-based programming language used for building cross-platform applications."
+  },
+  "javafx":     {
+    "label":       "JavaFX",
+    "icon":        "nonicons:java-16",
+    "url":         "https://openjfx.io/",
+    "description": "A Java library for building rich client desktop applications with modern UIs."
+  },
+  "typescript": {
+    "label":       "TypeScript",
+    "icon":        "logos:typescript-icon",
+    "url":         "https://www.typescriptlang.org/",
+    "description": "A superset of JavaScript that adds static typing to the language."
+  },
+  "javascript": {
+    "label":       "Javascript",
+    "icon":        "logos:javascript",
+    "url":         "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "description": "The programming language of the Web, used for building dynamic websites and applications."
+  },
+  "nodejs":     {
+    "label":       "Node.js",
+    "icon":        "logos:nodejs-icon",
+    "url":         "https://nodejs.org/en",
+    "description": "A JavaScript runtime built on Chrome's V8 engine for building fast, scalable server applications."
+  },
+  "express":    {
+    "label":       "Express.js",
+    "icon":        "simple-icons:express",
+    "url":         "https://expressjs.com/",
+    "description": "A minimal and flexible Node.js web application framework for building APIs and web apps."
+  },
+  "mongodb":    {
+    "label":       "MongoDB",
+    "icon":        "logos:mongodb-icon",
+    "url":         "https://mongodb.com/",
+    "description": "A NoSQL document database designed for high scalability and flexibility."
+  },
+  "postgresql": {
+    "label":       "PostgreSQL",
+    "icon":        "devicon:postgresql",
+    "url":         "https://www.postgresql.org/",
+    "description": "An open-source relational database system known for its reliability and advanced features."
+  },
+  "sqlserver":  {
+    "label":       "SQL Server",
+    "icon":        "devicon:microsoftsqlserver",
+    "url":         "https://www.microsoft.com/en-us/sql-server/",
+    "description": "A relational database management system developed by Microsoft, used in enterprise environments."
+  },
+  "powerapps":  {
+    "label":       "Microsoft Power Apps",
+    "icon":        "arcticons:microsoft-power-apps",
+    "url":         "https://www.microsoft.com/en-us/power-platform/products/power-apps",
+    "description": "A Microsoft service for building low-code custom applications quickly and easily."
+  },
+  "electron":   {
+    "label":       "Electron.js",
+    "icon":        "devicon:electron",
+    "url":         "https://www.electronjs.org/",
+    "description": "A framework for building cross-platform desktop apps using web technologies like JavaScript, HTML, and CSS."
+  },
+  "mui":        {
+    "label":       "Material UI",
+    "icon":        "logos:material-ui",
+    "url":         "https://mui.com/",
+    "description": "A popular React UI framework offering prebuilt, customizable components based on Material Design."
+  },
+  "python":     {
+    "label":       "Python",
+    "icon":        "material-icon-theme:python",
+    "url":         "https://www.python.org/",
+    "description": "A high-level programming language known for its readability and vast ecosystem for web, data, and automation."
+  }
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "title":       "Rep Assist",
+    "description": "Complete knowledge management and CRM application suite. What began as a hands-on training project quickly became an indispensable set of tools relied upon by an entire company.",
+    "flags": ["pro", "inuse"],
+    "images":      [
+      {
+        "url":     "/images/rep_assist_About.png",
+        "caption": "My first real project, Rep Assist was still relied upon daily by almost 100 employees as of 2023."
+      },
+      {
+        "url":     "/images/rep_assist_Appetite Guide.png",
+        "caption": "Heavily database-driven, Rep Assist included an \"Appetite Guide\" which provided staff with immediate access to many details needed to assist callers on a daily basis. This is also where the staff would record their phone calls and other interactions with customers."
+      },
+      {
+        "url":     "/images/rep_assist_Carrier Database.png",
+        "caption": "Providing up-to-the-minute details on our carrier relationships required integrated realtime communication with our SQL Server backend."
+      },
+      {
+        "url":     "/images/rep_assist_Resource Center.png",
+        "caption": "No knowledge management system would be complete without a centralized location for standard documents, links to company policies, and the like. Rep Assist also provided an integrated \"envelope\" system that connected with Outlook to send one or more documents directly from the application."
+      },
+      {
+        "url":     "/images/rep_assist_Agency Search.png",
+        "caption": "As a division of Farmers Insurance, our staff needed an integrated method of loading agent data and also tracking interactions with specific agents. The \"Agency Search\" feature in Rep Assist provided this data along with many qualify-of-life features."
+      },
+      {
+        "url":     "/images/rep_assist_Random Code.png",
+        "caption": "A sampling of the Rep Assist source code, highlighting some of the Utility methods/functions created for the system. Note that this project began as a learning experience for me and I had not yet developed best practices for code organization and documentation."
+      }
+    ],
+    "techStack":   [
+      "java",
+      "javafx",
+      "sqlserver"
+    ]
+  },
+  {
+    "title":       "E&S Filing Manager",
+    "description": "The Excess & Surplus Lines industry's first and only state filings manager! This application helped ensure compliance with state filing regulations, avoiding penalties and fees.",
+    "flags": ["pro", "inuse"],
+    "images":      [
+      {
+        "url":     "/images/es_filing_manager.png",
+        "caption": "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
+      }
+    ],
+    "techStack":   [
+      "java",
+      "javafx",
+      "sqlserver"
+    ]
+  },
+  {
+    "title":       "Slater - The Acquisitions Manager",
+    "description": "Data-heavy application designed to assist with (and track) the transferring an agent's book of business to another agency.",
+    "flags": ["pro", "incomplete", "archived"],
+    "images":      [
+      {
+        "url":     "/images/slater_01.png"
+      }
+    ],
+    "techStack":   [
+      "java",
+      "javafx",
+      "sqlserver"
+    ]
+  },
+  {
+    "title":       "E&S Tax Calculator",
+    "description": "My first real web-based application, this simple tool assisted underwriters with ensuring the proper tax was being charged on new insurance policies.",
+    "flags": ["pro", "inuse"],
+    "images":      [
+      {
+        "url":     "/images/tax_calculator_03.png",
+        "caption": "This React application was deployed as a native Windows application (via Electron), but received automatic updates. With an XML \"backend\" providing the state-specific tax rates and rules, employees were able to ensure compliance with state regulations."
+      },
+      {
+        "url":     "/images/tax_calculator_04.png",
+        "caption": "State rules and regulations are subject to change; this interface ensured users were aware of what changed and when."
+      },
+      {
+        "url":     "/images/tax_calculator_01.png",
+        "caption": "A proper API was planned for this application at some time in the future; here is a sampling of the API code that would talk to the \"backend\" (provided at this time via a bundled XML)."
+      },
+      {
+        "url":     "/images/tax_calculator_02.png",
+        "caption": "This application ignited my appreciation for the MUI framework, which can be seen in use here."
+      }
+    ],
+    "techStack":   [
+      "react",
+      "electron",
+      "mui"
+    ]
+  },
+  {
+    "title":       "Onboarding Manager",
+    "flags": ["pro", "incomplete", "archived"],
+    "description": "Incomplete PowerApps application that was to serve as a organizer/manager for onboarding managers and trainers for new employees.",
+    "images":      [
+      {
+        "url":     "/images/onboarding_manager_01.png",
+        "caption": "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
+      },
+      {
+        "url":     "/images/onboarding_manager_02.png",
+        "caption": "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
+      }
+    ],
+    "techStack":   [
+      "powerapps"
+    ]
+  },
+  {
+    "title":       "Teams Background Switcher",
+    "flags": ["personal", "inuse"],
+    "description": "A simple script that extends the available video backgrounds in Microsoft Teams.",
+    "images":      [
+      {
+        "url":     "/images/tbs.png",
+        "caption": "Behind the scenes, the script allows users to specify a local folder containing their additional video backgrounds, and switch those for the defaults provided by Microsoft."
+      }
+    ],
+    "githubUrl":   "https://github.com/nrossin/teams-bg-switcher",
+    "techStack":   [
+      "python"
+    ]
+  },
+  {
+    "title":       "Zipuno.io",
+    "description": "Secure, private, and anonymous file sharing made easy—time bombs included!",
+    "flags": ["personal", "wip"],
+    "images":      [
+      {
+        "url":     "/images/zipuno_01.png",
+        "caption": "First personal app to include backend coding, Zipuno.io utilizes a PostgreSQL database to facilitate file sharing."
+      }
+    ],
+    "githubUrl":   "https://github.com/nrossin/zipuno-frontend",
+    "liveDemoUrl": "https://zipuno-frontend.onrender.com/",
+    "techStack":   [
+      "react",
+      "typescript",
+      "nodejs",
+      "express",
+      "postgresql"
+    ]
+  },
+  {
+    "title":       "Legend of the Red Dragon - React Clone",
+    "description": "A simple passion project meant to capture the nostalgic magic of my favorite BBS door game of yesteryear. Still a work in progress!",
+    "flags": ["personal", "wip"],
+    "images":      [
+      {
+        "url":     "/images/lord-web_01.png",
+        "caption": "Legend of the Red Dragon was a popular text-based, online role playing game that I grew up with. I am using modern web technology to bring the format back to life."
+      }
+    ],
+    "techStack":   [
+      "react",
+      "typescript",
+      "mui"
+    ]
+  }
+]
