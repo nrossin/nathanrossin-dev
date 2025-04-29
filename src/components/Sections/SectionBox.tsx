@@ -17,7 +17,7 @@ const SectionBox = ({id, title, subtitle, children}: SectionBoxProps) => {
              component="section"    // IntersectionObserver (in App.tsx) will be monitoring these `<section>` elements.
              sx={{
                  minHeight: '50vh',
-                 backgroundColor: theme.palette.sectionBackgrounds[id],
+                 backgroundImage: theme.palette.sectionBackgrounds[id],
                  color: theme.palette.text.primary,
                  display: 'flex',
                  flexDirection: 'column',
@@ -31,9 +31,8 @@ const SectionBox = ({id, title, subtitle, children}: SectionBoxProps) => {
         >
             <Typography variant="h2" fontWeight="bold">{title}</Typography>
             <Typography variant="h5">{subtitle}</Typography>
-            <Box sx={{mt: 2, padding: 2}}>
-                {children}
-            </Box>
+
+            {children}
         </Box>
     );
 };
