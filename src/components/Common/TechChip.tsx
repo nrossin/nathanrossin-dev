@@ -27,6 +27,7 @@ const TechChip: React.FC<TechChipProps> = ({link = true, techInfo, selected, onC
                 size="medium" // <--- slight size up
                 sx={{
                     paddingX: 1,
+                    transition: 'background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out', // Animate the light/dark transition
                 }}
                 onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
                     if (!link && onClick) {
@@ -34,6 +35,7 @@ const TechChip: React.FC<TechChipProps> = ({link = true, techInfo, selected, onC
                         onClick(e);
                     }
                 }}
+
             />
         </Tooltip>
     )

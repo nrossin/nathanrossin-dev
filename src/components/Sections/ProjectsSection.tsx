@@ -29,8 +29,7 @@ const ProjectsSection: React.FC = () => {
 
     return (
         <SectionBox id="projects"
-                    title="Projects"
-                    subtitle="Here are some of my favorite projects"
+                    title="Solo Projects"
         >
             <Typography variant="h6" sx={{m: 4}}>
                 The applications listed here are the professional and personal projects on which I was the sole

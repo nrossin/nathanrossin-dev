@@ -29,7 +29,7 @@ const SectionBox = ({id, title, subtitle, children}: SectionBoxProps) => {
                  transition: 'background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out', // Animate the light/dark transition
              }}
         >
-            <Typography variant="h2">{title}</Typography>
+            <Typography variant="h2" fontWeight="bold">{title}</Typography>
             <Typography variant="h5">{subtitle}</Typography>
             <Box sx={{mt: 2, padding: 2}}>
                 {children}
