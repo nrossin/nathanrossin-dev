@@ -100,7 +100,7 @@ const Navbar: React.FC<NavbarProps> = ({activeSection}) => {
                 <Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>
                     {/*Left: Logo and Title*/}
                     <Typography variant="h6" component="div">
-                        Nathan Rossin
+                        {appName}
                     </Typography>
 
                     {/*Center: Desktop Links*/}
