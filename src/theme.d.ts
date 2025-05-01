@@ -5,7 +5,7 @@ declare module '@mui/material/styles' {
     interface Palette {
         sectionBackgrounds: {
             home: string;
-            resume: string;
+            history: string;
             projects: string;
             contact: string;
         };
@@ -13,7 +13,7 @@ declare module '@mui/material/styles' {
     interface PaletteOptions {
         sectionBackgrounds?: {
             home: string;
-            resume: string;
+            history: string;
             projects: string;
             contact: string;
         };

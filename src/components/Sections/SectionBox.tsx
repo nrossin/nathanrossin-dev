@@ -2,7 +2,7 @@ import { Box, Typography, useTheme } from '@mui/material';
 import { ReactNode } from 'react';
 
 interface SectionBoxProps {
-    id: 'home' | 'resume' | 'projects' | 'contact'; // Only allow known sections as ids
+    id: 'home' | 'history' | 'projects' | 'contact'; // Only allow known sections as ids
     title: string;
     subtitle?: string;
     children?: ReactNode

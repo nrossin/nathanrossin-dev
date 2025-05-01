@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({activeSection}) => {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     // Navigation buttons to be included in the NavBar
-    const navItems = ['Home', 'Resume', 'Projects', 'Contact'];
+    const navItems = ['Home', 'History', 'Projects', 'Contact'];
 
     // Mobile-friendly menu toggle
     const handleDrawerToggle = () => {

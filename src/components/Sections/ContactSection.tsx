@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import SectionBox from './SectionBox.tsx';
 
@@ -9,7 +9,6 @@ const ContactSection: React.FC = () => {
         email: '',
         message: ''
     });
-
 
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -71,7 +70,7 @@ const ContactSection: React.FC = () => {
                         type="submit"
                         variant="contained"
                         color="primary"
-                        sx={{ mt: 2 }}
+                        sx={{mt: 2}}
                         fullWidth
                     >
                         Send Message

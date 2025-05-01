@@ -22,7 +22,7 @@ const lightPalette = {
     divider: '#3d5ee1',
     sectionBackgrounds: {
         home: 'linear-gradient( 89.2deg,  rgba(191,241,236,1) 22.3%, rgba(109,192,236,1) 84.1% );',
-        resume: 'linear-gradient( 181.2deg,  rgba(181,239,249,1) 10.5%, rgba(254,254,254,1) 86.8% );',
+        history: 'linear-gradient( 181.2deg,  rgba(181,239,249,1) 10.5%, rgba(254,254,254,1) 86.8% );',
         projects: 'linear-gradient( 109.6deg,  rgba(17,151,147,1) 11.2%, rgba(154,214,212,1) 55.4%, rgba(255,233,171,1) 100.2% );',
         contact: 'linear-gradient( 180.3deg,  rgba(221,221,221,1) 5.5%, rgba(110,136,161,1) 90.2% );',
     },
@@ -49,7 +49,7 @@ const darkPalette = {
     divider: '#1e1e1e',
     sectionBackgrounds: {
         home: 'linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));',
-        resume: 'linear-gradient(147deg, #000000 0%, #2c3e50 74%);',
+        history: 'linear-gradient(147deg, #000000 0%, #2c3e50 74%);',
         projects: 'linear-gradient(315deg, #003153 0%, #1B1B1B 74%);\n',
         contact: 'radial-gradient(140% 107% at 50% 10%, #000314 37.41%, #6633EE 69.27%, #FFFFFF 100%);'
     },

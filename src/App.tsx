@@ -4,7 +4,7 @@ import NavBar from './components/Navbar/Navbar';
 import ContactSection from './components/Sections/ContactSection.tsx';
 import HomeSection from './components/Sections/HomeSection.tsx';
 import ProjectsSection from './components/Sections/ProjectsSection.tsx';
-import ResumeSection from './components/Sections/ResumeSection.tsx';
+import HistorySection from './components/Sections/HistorySection.tsx';
 import { ColorModeContext } from './theme/ColorModeContext.tsx';
 import { getTheme } from './theme/theme.ts';
 
@@ -81,7 +81,7 @@ const App: React.FC = () => {
                 <Box>
                     <Box>
                         <HomeSection />
-                        <ResumeSection />
+                        <HistorySection />
                         <ProjectsSection />
                         <ContactSection />
                     </Box>

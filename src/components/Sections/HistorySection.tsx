@@ -13,16 +13,16 @@ import React from 'react';
 import { workHistory } from '../../data/workHistory.ts';
 import SectionBox from './SectionBox.tsx';
 
-const ResumeSection: React.FC = () => {
+const HistorySection: React.FC = () => {
 
     // Allow for adaptation when on mobile
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <SectionBox id="resume"
-                    title="Work Experience"
-                    subtitle="My work experience and education"
+        <SectionBox id="history"
+                    title="Experience / History"
+                    subtitle="Career & Experience Timeline"
         >
 
             <Box sx={{py: 8}}>
@@ -39,7 +39,7 @@ const ResumeSection: React.FC = () => {
                                     {role.company}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" sx={{mb: 1}}>
-                                    {role.startDate} – {role.endDate}
+                                    {role.startDate} – {role.endDate} ({role.duration})
                                 </Typography>
                                 <List dense>
                                     {role.description.map((item, idx) => (
@@ -64,7 +64,12 @@ const ResumeSection: React.FC = () => {
                                     variant="body2"
                                     color="text.secondary"
                                 >
-                                    {role.startDate} - {role.endDate}
+                                    <Typography variant="body2" color={theme.palette.text.primary}>
+                                        {role.startDate} - {role.endDate}
+                                    </Typography>
+                                    <Typography variant="body2" color={theme.palette.text.secondary} sx={{mb: 1}}>
+                                        {role.duration}
+                                    </Typography>
                                 </TimelineOppositeContent>
 
                                 <TimelineSeparator>
@@ -79,8 +84,11 @@ const ResumeSection: React.FC = () => {
                                     <Typography variant="h6" component="span">
                                         {role.title}
                                     </Typography>
-                                    <Typography variant="subtitle2" color="text.secondary">
+                                    <Typography variant="subtitle1" fontWeight="bold" color="text.secondary">
                                         {role.company}
+                                    </Typography>
+                                    <Typography variant="subtitle2" sx={{fontStyle: 'italic'}} color={theme.palette.text.secondary}>
+                                        ({role.department})
                                     </Typography>
 
                                     <List dense>
@@ -106,4 +114,4 @@ const ResumeSection: React.FC = () => {
     );
 };
 
-export default ResumeSection;
+export default HistorySection;
