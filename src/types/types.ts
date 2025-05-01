@@ -9,3 +9,8 @@ export interface TechInfo {
 export type TechItemMap = {
     [techName: string]: TechInfo;
 };
+
+export interface LightboxImage {
+    url: string;
+    caption?: string;
+}

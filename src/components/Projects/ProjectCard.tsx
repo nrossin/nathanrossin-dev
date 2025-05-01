@@ -11,14 +11,16 @@ import {
     Stack,
     Tooltip,
     Typography,
+    useMediaQuery,
     useTheme
 } from '@mui/material';
 import React, { useState } from 'react';
 import { flagInfoMap } from '../../data/flagInfoMap';
 import techIconMapRaw from '../../data/techItemMap.json';
 import { TechItemMap } from '../../types/types.ts';
-import LightboxDialog from '../Common/LightboxDialog.tsx';
 import TechChip from '../Common/TechChip.tsx';
+import LightboxDialogDesktop from '../Lightbox/LightboxDialogDesktop.tsx';
+import LightboxDialogMobile from '../Lightbox/LightboxDialogMobile.tsx';
 
 // Images for each project may also include a caption
 interface ProjectImage {
@@ -49,6 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
     const theme = useTheme();
     const techItemMap: TechItemMap = techIconMapRaw;
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     // Setup state for the image lightbox
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -168,19 +171,40 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
             </Card>
 
-            <LightboxDialog
-                open={lightboxOpen}
-                images={images}
-                currentIndex={currentIndex}
-                onClose={() => setLightboxOpen(false)}
-                onPrev={() =>
-                    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
-                }
-                onNext={() =>
-                    setCurrentIndex((prev) => (prev + 1) % images.length)
-                }
-                goTo={(index) => setCurrentIndex(index)}
-            />
+            {/*Desktop Lightbox Dialog*/}
+            {isMobile ? (
+                <LightboxDialogMobile
+                    open={lightboxOpen}
+                    images={images}
+                    currentIndex={currentIndex}
+                    onClose={() => setLightboxOpen(false)}
+                    onPrev={() => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)}
+                    onNext={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
+                />
+            ) : (
+                <LightboxDialogDesktop open={lightboxOpen}
+                                       images={images}
+                                       currentIndex={currentIndex}
+                                       onClose={() => setLightboxOpen(false)}
+                                       onPrev={() => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)}
+                                       onNext={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
+                                       goTo={(index) => setCurrentIndex(index)}
+                />
+            )}
+
+            {/*<LightboxDialogDesktop*/}
+            {/*    open={lightboxOpen}*/}
+            {/*    images={images}*/}
+            {/*    currentIndex={currentIndex}*/}
+            {/*    onClose={() => setLightboxOpen(false)}*/}
+            {/*    onPrev={() =>*/}
+            {/*        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)*/}
+            {/*    }*/}
+            {/*    onNext={() =>*/}
+            {/*        setCurrentIndex((prev) => (prev + 1) % images.length)*/}
+            {/*    }*/}
+            {/*    goTo={(index) => setCurrentIndex(index)}*/}
+            {/*/>*/}
         </>
     );
 };
