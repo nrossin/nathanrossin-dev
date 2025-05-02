@@ -30,8 +30,13 @@ const TechChip: React.FC<TechChipProps> = ({link = true, techInfo, selected, onC
                     transition: 'background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out', // Animate the light/dark transition
                 }}
                 onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+
+                    // Do not allow the click to bubble up to the parent component
+                    e.stopPropagation();
+
+                    // Normally, the TechChip will act as an <a href> link, opening a URL automatically. However,
+                    // if this is not a link and provides its own `onClick()`, trigger that instead.
                     if (!link && onClick) {
-                        e.stopPropagation();
                         onClick(e);
                     }
                 }}
