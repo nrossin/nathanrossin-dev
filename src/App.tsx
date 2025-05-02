@@ -1,9 +1,9 @@
 import { Box, CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material';
 import React, { useEffect, useMemo, useState } from 'react';
 import NavBar from './components/Navbar/Navbar';
-import ContactSection from './components/Sections/ContactSection.tsx';
+import ContactSection from './components/Sections/ContactSection/ContactSection.tsx';
 import HistorySection from './components/Sections/HistorySection.tsx';
-import HomeSection from './components/Sections/HomeSection.tsx';
+import HomeSection from './components/Sections/HomeSection/HomeSection.tsx';
 import ProjectsSection from './components/Sections/ProjectsSection.tsx';
 import { ColorModeContext } from './theme/ColorModeContext.tsx';
 import { getTheme } from './theme/theme.ts';
