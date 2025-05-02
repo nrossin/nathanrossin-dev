@@ -50,21 +50,21 @@
   },
   "mongodb":    {
     "label":       "MongoDB",
-    "category":    "Backend",
+    "category":    "Database",
     "icon":        "logos:mongodb-icon",
     "url":         "https://mongodb.com/",
     "description": "A NoSQL document database designed for high scalability and flexibility."
   },
   "postgresql": {
     "label":       "PostgreSQL",
-    "category":    "Backend",
+    "category":    "Database",
     "icon":        "devicon:postgresql",
     "url":         "https://www.postgresql.org/",
     "description": "An open-source relational database system known for its reliability and advanced features."
   },
   "sqlserver":  {
     "label":       "SQL Server",
-    "category":    "Backend",
+    "category":    "Database",
     "icon":        "devicon:microsoftsqlserver",
     "url":         "https://www.microsoft.com/en-us/sql-server/",
     "description": "A relational database management system developed by Microsoft, used in enterprise environments."
@@ -78,7 +78,7 @@
   },
   "electron":   {
     "label":       "Electron.js",
-    "category":    "Other",
+    "category":    "Frontend",
     "icon":        "devicon:electron",
     "url":         "https://www.electronjs.org/",
     "description": "A framework for building cross-platform desktop apps using web technologies like JavaScript, HTML, and CSS."
@@ -92,7 +92,7 @@
   },
   "python":     {
     "label":       "Python",
-    "category":    "Other",
+    "category":    "Backend",
     "icon":        "material-icon-theme:python",
     "url":         "https://www.python.org/",
     "description": "A high-level programming language known for its readability and vast ecosystem for web, data, and automation."
@@ -132,19 +132,19 @@
     "description": "Visual Studio Code (VS Code) is a free, open-source code editor developed by Microsoft.",
     "category":    "IDEs"
   },
-  "vscode":     {
+  "poweron":     {
     "label":       "PowerOn",
     "icon":        "material-symbols:code",
     "url":         "https://jackhenry.dev//",
     "description": "Proprietary programming language by JHA, primarily used with the Symitar core for credit unions",
-    "category":    "Industry-Specific"
+    "category":    "Backend"
   },
   "php":        {
     "label":       "PHP",
     "icon":        "material-icon-theme:php-elephant",
     "url":         "https://www.php.net/",
     "description": "PHP, standing for Hypertext Preprocessor, is a widely used, open-source, server-side scripting language primarily used for web development.",
-    "category":    "Frontend"
+    "category":    "Backend"
   },
   "alteryx":    {
     "label":       "Alteryx",
@@ -175,18 +175,18 @@
     "category":    "Other"
   },
   "windows":    {
-    "label":    "Windows",
-    "icon":     "devicon:windows8",
-    "url":      "https://www.microsoft.com/en-us/windows/?r=1",
+    "label":       "Windows",
+    "icon":        "devicon:windows8",
+    "url":         "https://www.microsoft.com/en-us/windows/?r=1",
     "description": "",
-    "category": "Operating Systems"
+    "category":    "Operating Systems"
   },
   "linux":      {
-    "label":    "Linux",
-    "icon":     "devicon:linux",
-    "url":      "https://kernel.org//",
+    "label":       "Linux",
+    "icon":        "devicon:linux",
+    "url":         "https://kernel.org//",
     "description": "",
-    "category": "Operating Systems"
+    "category":    "Operating Systems"
   },
   "aix":        {
     "label":       "IBM AIX",
@@ -194,5 +194,12 @@
     "url":         "https://www.ibm.com/products/aix",
     "description": "IBM AIX is a proprietary Unix operating system developed and sold by IBM since 1986.",
     "category":    "Operating Systems"
+  },
+  "sqlite":     {
+    "label":       "SQLite",
+    "icon":        "devicon:sqlite",
+    "url":         "https://sqlite.org/index.html",
+    "description": "SQLite is a lightweight, self-contained, serverless, zero-configuration SQL database engine.",
+    "category":    "Database"
   }
 }
