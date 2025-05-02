@@ -24,11 +24,12 @@ const LightboxThumbnailRow: React.FC<LightboxThumbnailRowProps> = ({
                 maxWidth: 900,
                 gap: 1,
                 mt: 2,
-                pb: 1
+                // minHeight: 60,
+                flexShrink: 0,
             }}
             onClick={(e) => e.stopPropagation()}
         >
-            {/*Create gallery of images*/}
+            {/*Create a gallery of images*/}
             {images.map((img, idx) => (
                 <Box
                     key={idx}
