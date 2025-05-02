@@ -17,7 +17,7 @@ const HistorySection: React.FC = () => {
 
     // Allow for adaptation when on mobile
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <SectionBox id="history"
