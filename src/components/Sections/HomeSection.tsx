@@ -4,6 +4,7 @@ import techItemMapRaw from '../../data/techItemMap.json';
 import { TechInfo, TechItemMap } from '../../types/types.ts';
 import TechChip from '../Common/TechChip.tsx';
 import SectionBox from './SectionBox.tsx';
+import ElephantTrigger from '../Elephant/ElephantTrigger'
 
 const HomeSection: React.FC = () => {
 
@@ -25,6 +26,7 @@ const HomeSection: React.FC = () => {
                     title="Hi, I'm Nathan"
                     subtitle="Full-Stack Develop & Software Engineer"
         >
+            <ElephantTrigger />
             <Box
                 display="flex"
                 gap={4}
@@ -78,7 +80,6 @@ const HomeSection: React.FC = () => {
                     </Grid>
 
                 ))}
-
             </Grid>
         </SectionBox>
     );
