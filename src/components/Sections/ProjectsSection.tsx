@@ -56,7 +56,8 @@ const ProjectsSection: React.FC = () => {
                           }}
                           sx={{
                               display: 'flex',
-                              justifyContent: 'center'
+                              justifyContent: 'center',
+                              minWidth: 400
                           }}
                     >
                         <Fade
