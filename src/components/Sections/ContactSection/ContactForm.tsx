@@ -1,7 +1,11 @@
 import { Alert, Box, Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {
+    isMobile: boolean
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({isMobile}) => {
 
     // Form state
     const [formValues, setFormValues] = useState({name: '', email: '', message: ''});
@@ -70,9 +74,11 @@ const ContactForm: React.FC = () => {
             onSubmit={onSubmit}
             sx={{
                 maxWidth: 600,
-                width: '100%',
+                // width: isMobile ? '100%' : 'auto',
+                minWidth: isMobile ? '100%': 400,
                 mx: 'auto',
                 mt: 4,
+                flexShrink: 0,
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 2,
