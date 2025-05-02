@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const ContactForm: React.FC = () => {
 
     // Formspree useForm hook
-    const [state, handleSubmit] = useForm('xeogaoen');
+    const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_FORM_ID);
 
     // Form state
     const [formValues, setFormValues] = useState({name: '', email: '', message: ''});
@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {
         if (!formValues.name.trim()) newErrors.name = 'Name is required';
         if (!formValues.email.trim()) {
             newErrors.email = 'Email address is required';
-        } else if (!/\S+@\S+|.|S+/.test(formValues.email)) newErrors.email = 'Email address is invalid';
+        } else if (!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(formValues.email)) newErrors.email = 'Email address is invalid';
         if (!formValues.message.trim()) newErrors.message = 'A message is required';
 
         setErrors(newErrors);
