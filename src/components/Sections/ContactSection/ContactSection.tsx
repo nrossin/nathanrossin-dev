@@ -1,6 +1,6 @@
 import React from 'react';
-import ContactForm from '../Contact/ContactForm.tsx';
-import SectionBox from './SectionBox.tsx';
+import ContactForm from '../ContactSection/ContactForm.tsx';
+import SectionBox from '../SectionBox.tsx';
 
 const ContactSection: React.FC = () => {
 

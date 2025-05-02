@@ -1,10 +1,10 @@
-import { Avatar, Box, Grid, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Avatar, Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
-import techItemMapRaw from '../../data/techItemMap.json';
-import { TechInfo, TechItemMap } from '../../types/types.ts';
-import TechChip from '../Common/TechChip.tsx';
-import ElephantTrigger from '../Elephant/ElephantTrigger'
-import SectionBox from './SectionBox.tsx';
+import techItemMapRaw from '../../../data/techItemMap.json';
+import { TechItemMap } from '../../../types/types.ts';
+import ElephantTrigger from '../../Elephant/ElephantTrigger'
+import SectionBox from '../SectionBox.tsx';
+import SkillsChart from './SkillsChart.tsx';
 
 const HomeSection: React.FC = () => {
 
@@ -13,16 +13,6 @@ const HomeSection: React.FC = () => {
     // Get a typed list of tech items
     const techItemMap: TechItemMap = techItemMapRaw;
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
-    // Group tech by category
-    const categorizedTech: { [category: string]: TechInfo[] } = {};
-    Object.entries(techItemMap).forEach(([, techInfo]) => {
-        if (!categorizedTech[techInfo.category]) {
-            categorizedTech[techInfo.category] = [];
-        }
-
-        categorizedTech[techInfo.category].push(techInfo);
-    });
 
     return (
         <SectionBox id="home"
@@ -73,26 +63,8 @@ const HomeSection: React.FC = () => {
                 "If you don't have time to do it right, when will you have time to do it over?"
             </Typography>
 
-
             {/*Skills Section*/}
-            {!isMobile && (
-                <Grid container spacing={4} justifyContent="center">
-                    {Object.entries(categorizedTech).map(([category, techs]) => (
-                        <Grid size={{xs: 12, sm: 6, md: 4}} key={category}>
-                            <Typography variant="h6" sx={{mb: 2}}>
-                                {category}
-                            </Typography>
-
-                            <Stack direction="row" gap={1} flexWrap="wrap">
-                                {techs.map((techInfo) => (
-                                    <TechChip key={techInfo.label} techInfo={techInfo} />
-                                ))}
-                            </Stack>
-                        </Grid>
-
-                    ))}
-                </Grid>
-            )}
+            <SkillsChart techItemMap={techItemMap} isMobile={isMobile} />
 
         </SectionBox>
     );
