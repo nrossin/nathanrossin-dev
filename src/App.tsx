@@ -1,10 +1,11 @@
+import { FormspreeProvider } from '@formspree/react';
 import { Box, CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material';
 import React, { useEffect, useMemo, useState } from 'react';
 import NavBar from './components/Navbar/Navbar';
 import ContactSection from './components/Sections/ContactSection.tsx';
+import HistorySection from './components/Sections/HistorySection.tsx';
 import HomeSection from './components/Sections/HomeSection.tsx';
 import ProjectsSection from './components/Sections/ProjectsSection.tsx';
-import HistorySection from './components/Sections/HistorySection.tsx';
 import { ColorModeContext } from './theme/ColorModeContext.tsx';
 import { getTheme } from './theme/theme.ts';
 
@@ -64,31 +65,32 @@ const App: React.FC = () => {
     const theme = useMemo(() => getTheme(mode), [mode]);
 
     return (
-        <ColorModeContext.Provider value={colorMode}>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <GlobalStyles
-                    styles={{
-                        body: {
-                            transition: 'background-color 1.5s ease, color 1.5s ease',
-                        },
-                        '#root': {
-                            transition: 'background-color 1.5s ease, color 1.5s ease',
-                        },
-                    }}
-                />
-                <NavBar activeSection={activeSection} />
-                <Box>
+        <FormspreeProvider>
+            <ColorModeContext.Provider value={colorMode}>
+                <ThemeProvider theme={theme}>
+                    <CssBaseline />
+                    <GlobalStyles
+                        styles={{
+                            body: {
+                                transition: 'background-color 1.5s ease, color 1.5s ease',
+                            },
+                            '#root': {
+                                transition: 'background-color 1.5s ease, color 1.5s ease',
+                            },
+                        }}
+                    />
+                    <NavBar activeSection={activeSection} />
                     <Box>
-                        <HomeSection />
-                        <HistorySection />
-                        <ProjectsSection />
-                        <ContactSection />
+                        <Box>
+                            <HomeSection />
+                            <HistorySection />
+                            <ProjectsSection />
+                            <ContactSection />
+                        </Box>
                     </Box>
-
-                </Box>
-            </ThemeProvider>
-        </ColorModeContext.Provider>
+                </ThemeProvider>
+            </ColorModeContext.Provider>
+        </FormspreeProvider>
     );
 };
 
