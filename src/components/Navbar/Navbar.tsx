@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({activeSection}) => {
                     </Typography>
 
                     {/*Center: Desktop Links*/}
-                    <Box sx={{display: {xs: 'none', sm: 'block'}}}>
+                    <Box sx={{display: {xs: 'none', md: 'block'}}}>
                         {navItems.map((item) => (
                             <Button key={item}
                                     sx={{
@@ -121,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({activeSection}) => {
                     </Box>
 
                     {/*Mobile Menu Icon*/}
-                    <Box sx={{display: {xs: 'flex', sm: 'none'}}}>
+                    <Box sx={{display: {xs: 'flex', md: 'none'}}}>
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
@@ -133,7 +133,7 @@ const Navbar: React.FC<NavbarProps> = ({activeSection}) => {
                     </Box>
 
                     {/*Right: Light / Dark toggle*/}
-                    <Box sx={{display: {xs: 'none', sm: 'flex'}}}>
+                    <Box sx={{display: {xs: 'none', md: 'flex'}}}>
                         <IconButton sx={{ml: 1}} onClick={colorMode.toggleColorMode} color="inherit">
                             {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                         </IconButton>
