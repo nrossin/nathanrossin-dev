@@ -13,7 +13,7 @@ const lightPalette = {
     },
     background: {
         default: 'blue',
-        paper: 'rgba(174,220,189,0.36)',
+        paper: '#E0E5EEFF',
     },
     text: {
         primary: '#000000',
@@ -21,10 +21,10 @@ const lightPalette = {
     },
     divider: '#3d5ee1',
     sectionBackgrounds: {
-        home: 'linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);',
-        history: 'linear-gradient(180deg, rgba(19, 171, 246, 1), rgba(209, 209, 209, 1));',
-        projects: 'linear-gradient(to top, #accbee 0%, #e7f0fd 100%);',
-        contact: 'linear-gradient(to top, #e8198b 0%, #c7eafd 100%);',
+        home: 'linear-gradient(315deg, #d5ddf8, #fff 57%);',
+        history: 'linear-gradient(220.55deg, #EAEAEA 0%, #8B8B8B 100%);',
+        projects: 'conic-gradient(at center top, rgb(17, 24, 39), rgb(243, 244, 246), rgb(17, 24, 39));\n',
+        contact: 'linear-gradient(to right, rgb(229, 231, 235), rgb(156, 163, 175), rgb(75, 85, 99));\n',
     },
 };
 
