@@ -1,15 +1,14 @@
-import { useForm } from '@formspree/react';
 import { Alert, Box, Button, TextField } from '@mui/material';
 import React, { useState } from 'react';
 
 const ContactForm: React.FC = () => {
 
-    // Formspree useForm hook
-    const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_FORM_ID);
-
     // Form state
     const [formValues, setFormValues] = useState({name: '', email: '', message: ''});
     const [errors, setErrors] = useState<{ [key: string]: string; }>({});
+
+    const [succeeded, setSucceeded] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
 
     // Check form fields for errors and missing values
     const validate = () => {
@@ -24,26 +23,45 @@ const ContactForm: React.FC = () => {
         return Object.keys(newErrors).length === 0;
     }
 
-    // Validate form values prior to submission
+    // Handle native form submission
     const onSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (validate()) {
-            // @ts-expect-error as Formspree is not type safe
-            await handleSubmit(e);
+
+        // Return if form is invalid
+        if (!validate()) return;
+
+        setSubmitting(true);
+
+        try {
+            const formData = new FormData();
+            formData.append('name', formValues.name);
+            formData.append('email', formValues.email);
+            formData.append('message', formValues.message);
+
+            // Submit the form to Formspree
+            const response = await fetch(`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_FORM_ID}`, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    Accept: 'application/json'
+                },
+            });
+
+            // Check reponse
+            if (response.ok) {
+                setSucceeded(true);
+                setFormValues({email: '', message: '', name: ''});
+                setErrors({});
+            } else {
+                const result = await response.json();
+                console.error('Form submission error: ', result);
+            }
+        } catch (error) {
+            console.error('Unexpected error submitting form: ', error);
+        } finally {
+            setSubmitting(false);
         }
     };
-
-    // Form has been submitted successfully, thank the nice people! :)
-    // Note that the form does not reset after submission and the useForm hook does not expose a method to modify
-    // `state.succeeded` directly. While a workaround with a keyed parent could be used, for simplicity, I am leaving
-    // this as-is (requiring a page reload if a second message is really needed).
-    if (state.succeeded) {
-        return (
-            <Alert severity="success" sx={{mt: 4}}>
-                Thank you for your message! I will get back to you as soon as possible.
-            </Alert>
-        );
-    }
 
     return (
         <Box
@@ -105,10 +123,16 @@ const ContactForm: React.FC = () => {
                 type="submit"
                 variant="contained"
                 color="secondary"
-                disabled={state.submitting}
+                disabled={submitting}
             >
-                {state.submitting ? 'Sending...' : 'Send Message'}
+                {submitting ? 'Sending...' : 'Send Message'}
             </Button>
+
+            {succeeded && (
+                <Alert severity="success" sx={{mt: 4}}>
+                    Thank you for your message! I will get back to you as soon as possible.
+                </Alert>
+            )}
         </Box>
     );
 };
