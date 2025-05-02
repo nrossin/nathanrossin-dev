@@ -1,4 +1,3 @@
-import { FormspreeProvider } from '@formspree/react';
 import { Box, CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material';
 import React, { useEffect, useMemo, useState } from 'react';
 import NavBar from './components/Navbar/Navbar';
@@ -65,32 +64,30 @@ const App: React.FC = () => {
     const theme = useMemo(() => getTheme(mode), [mode]);
 
     return (
-        <FormspreeProvider>
-            <ColorModeContext.Provider value={colorMode}>
-                <ThemeProvider theme={theme}>
-                    <CssBaseline />
-                    <GlobalStyles
-                        styles={{
-                            body: {
-                                transition: 'background-color 1.5s ease, color 1.5s ease',
-                            },
-                            '#root': {
-                                transition: 'background-color 1.5s ease, color 1.5s ease',
-                            },
-                        }}
-                    />
-                    <NavBar activeSection={activeSection} />
+        <ColorModeContext.Provider value={colorMode}>
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <GlobalStyles
+                    styles={{
+                        body: {
+                            transition: 'background-color 1.5s ease, color 1.5s ease',
+                        },
+                        '#root': {
+                            transition: 'background-color 1.5s ease, color 1.5s ease',
+                        },
+                    }}
+                />
+                <NavBar activeSection={activeSection} />
+                <Box>
                     <Box>
-                        <Box>
-                            <HomeSection />
-                            <HistorySection />
-                            <ProjectsSection />
-                            <ContactSection />
-                        </Box>
+                        <HomeSection />
+                        <HistorySection />
+                        <ProjectsSection />
+                        <ContactSection />
                     </Box>
-                </ThemeProvider>
-            </ColorModeContext.Provider>
-        </FormspreeProvider>
+                </Box>
+            </ThemeProvider>
+        </ColorModeContext.Provider>
     );
 };
 
