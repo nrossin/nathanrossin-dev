@@ -1,54 +1,77 @@
-# React + TypeScript + Vite
+# Nathan Rossin – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code for my personal developer portfolio site, designed to showcase selected full-stack projects,
+skills, and experience.
 
-Currently, two official plugins are available:
+👉 **Live Site:** [https://nathanrossin.onrender.com/](https://nathanrossin.onrender.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🧰 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This site is built using:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React.js** + **TypeScript**
+- **Vite** – fast build tool
+- **MUI (Material UI)** – responsive UI components
+- **Framer Motion** – UI animations
+- **Formspree** – contact form (no backend required)
+- **Iconify** – rich tech stack icons
+- **Hosted on Render**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Responsive Design**: Mobile-friendly with light/dark mode toggle.
+- **Project Gallery**: Card-based layout with image lightbox and filtering by tech stack.
+- **Resume Section**: Interactive timeline with role highlights.
+- **Tech Showcase**: Skill list grouped by category.
+- **Contact Form**: Email integration via Formspree.
+- **"Elephant in the Room"** Easter egg: a light-hearted nod to design & AI.
+
+---
+
+## 💡 Development Notes
+
+This site was built as both a portfolio and a learning tool. All code is modularized into reusable components with an
+emphasis on clarity and maintainability.
+
+I wrote all code manually, even when seeking support from AI (like ChatGPT). My goal wasn't just to "get it working" —
+but to understand how each part functions and fits together.
+
+---
+
+## 📦 Getting Started (Dev Setup)
+
+1. Clone the repository  
+   `git clone https://github.com/nrossin/nathanrossin-dev.git`
+
+2. Install dependencies  
+   `npm install`
+
+3. Run the development server  
+   `npm run dev`
+
+4. Build for production  
+   `npm run build`
+
+---
+
+## 🧪 Feedback & Contribution
+
+While this is a personal project, I’m always open to constructive feedback. Feel free to fork the repo or drop an issue
+if you notice anything amiss.
+
+---
+
+## 🔐 Environment Variables
+
+For email form integration, you’ll need to add this to a `.env` file in the project root (not committed):
+
+`VITE_FORMSPREE_FORM_ID=[your_form_id_here]`
+
+## 📄 License
+
+MIT License — free to use and adapt. Please credit the original if heavily reusing structure or logic.
+
