@@ -33,6 +33,7 @@ const HomeSection: React.FC = () => {
                 alignItems="center"
                 justifyContent="center"
                 flexWrap="wrap"
+                sx={{mt: 4}}
             >
                 <Avatar
                     alt="Nathan Rossin"
@@ -44,10 +45,16 @@ const HomeSection: React.FC = () => {
                 />
 
                 <Typography variant="body1" sx={{maxWidth: 600}}>
-                    Welcome! I am a full-stack developer with a passion for elegant interfaces (though I am not, by
-                    nature,
-                    a designer), clean code, and features that serve the end user. I consider myself to be a
-                    Jack-of-All-Trades, but a Master of none.
+                    Welcome! I am a full-stack developer and software engineer with a passion for creating clean, readable,
+                    and modular code. With almost 10 years of experience building custom applications using various platforms
+                    and frameworks, I pride myself on having the skills necessary to determine what the business actually
+                    needs and then delivering beyond their expectations!
+                    <br/><br/>
+                    Please feel free to check out my Projects below and let me know if you have any questions or comments!
+                </Typography>
+
+                <Typography variant="body1" sx={{maxWidth: 600}}>
+
                 </Typography>
             </Box>
 
