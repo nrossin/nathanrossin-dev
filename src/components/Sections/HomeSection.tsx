@@ -1,15 +1,18 @@
-import { Avatar, Box, Divider, Grid, Stack, Typography } from '@mui/material';
+import { Avatar, Box, Grid, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 import techItemMapRaw from '../../data/techItemMap.json';
 import { TechInfo, TechItemMap } from '../../types/types.ts';
 import TechChip from '../Common/TechChip.tsx';
-import SectionBox from './SectionBox.tsx';
 import ElephantTrigger from '../Elephant/ElephantTrigger'
+import SectionBox from './SectionBox.tsx';
 
 const HomeSection: React.FC = () => {
 
+    const theme = useTheme();
+
     // Get a typed list of tech items
     const techItemMap: TechItemMap = techItemMapRaw;
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     // Group tech by category
     const categorizedTech: { [category: string]: TechInfo[] } = {};
@@ -24,7 +27,7 @@ const HomeSection: React.FC = () => {
     return (
         <SectionBox id="home"
                     title="Hi, I'm Nathan"
-                    subtitle="Full-Stack Develop & Software Engineer"
+                    subtitle="Full-Stack Developer & Software Engineer"
         >
             <ElephantTrigger />
             <Box
@@ -45,49 +48,52 @@ const HomeSection: React.FC = () => {
                 />
 
                 <Typography variant="body1" sx={{maxWidth: 600}}>
-                    Welcome! I am a full-stack developer and software engineer with a passion for creating clean, readable,
-                    and modular code. With almost 10 years of experience building custom applications using various platforms
-                    and frameworks, I pride myself on having the skills necessary to determine what the business actually
+                    Welcome! I am a full-stack developer and software engineer with a passion for creating clean,
+                    readable,
+                    and modular code. With almost 10 years of experience building custom applications using various
+                    platforms
+                    and frameworks, I pride myself on having the skills necessary to determine what the business
+                    actually
                     needs and then delivering beyond their expectations!
-                    <br/><br/>
-                    Please feel free to check out my Projects below and let me know if you have any questions or comments!
-                </Typography>
-
-                <Typography variant="body1" sx={{maxWidth: 600}}>
-
+                    <br /><br />
+                    Please feel free to check out my Projects below and let me know if you have any questions or
+                    comments!
                 </Typography>
             </Box>
 
             <Typography
-                variant="h6"
+                variant="h5"
                 sx={{
-                    mt: 2,
+                    mt: 4,
                     mb: 4,
                     textAlign: 'center',
                     fontStyle: 'italic',
-                    color: 'primary.contrastText',
+                    color: theme.palette.secondary.main
                 }}>
                 "If you don't have time to do it right, when will you have time to do it over?"
             </Typography>
 
+
             {/*Skills Section*/}
-            <Divider sx={{mb: 4}} />
-            <Grid container spacing={4} justifyContent="center">
-                {Object.entries(categorizedTech).map(([category, techs]) => (
-                    <Grid size={{xs: 12, sm: 6, md: 4}} key={category}>
-                        <Typography variant="h6" sx={{mb: 2}}>
-                            {category}
-                        </Typography>
+            {!isMobile && (
+                <Grid container spacing={4} justifyContent="center">
+                    {Object.entries(categorizedTech).map(([category, techs]) => (
+                        <Grid size={{xs: 12, sm: 6, md: 4}} key={category}>
+                            <Typography variant="h6" sx={{mb: 2}}>
+                                {category}
+                            </Typography>
 
-                        <Stack direction="row" gap={1} flexWrap="wrap">
-                            {techs.map((techInfo) => (
-                                <TechChip key={techInfo.label} techInfo={techInfo} />
-                            ))}
-                        </Stack>
-                    </Grid>
+                            <Stack direction="row" gap={1} flexWrap="wrap">
+                                {techs.map((techInfo) => (
+                                    <TechChip key={techInfo.label} techInfo={techInfo} />
+                                ))}
+                            </Stack>
+                        </Grid>
 
-                ))}
-            </Grid>
+                    ))}
+                </Grid>
+            )}
+
         </SectionBox>
     );
 };
