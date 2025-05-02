@@ -50,8 +50,8 @@ const darkPalette = {
     sectionBackgrounds: {
         home: 'linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));',
         history: 'linear-gradient(147deg, #000000 0%, #2c3e50 74%);',
-        projects: 'linear-gradient(315deg, #003153 0%, #1B1B1B 74%);\n',
-        contact: 'radial-gradient(140% 107% at 50% 10%, #000314 37.41%, #6633EE 69.27%, #FFFFFF 100%);'
+        projects: 'linear-gradient(315deg, #003153 0%, #1B1B1B 74%);',
+        contact: 'linear-gradient(315deg, #003366 0%, #242124 74%);'
     },
 };
 
