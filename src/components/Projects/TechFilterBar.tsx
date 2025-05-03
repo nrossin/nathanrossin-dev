@@ -1,4 +1,4 @@
-import { Box, Chip, Stack, Typography } from '@mui/material';
+import { Box, Chip, Stack, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import techIconMapRaw from '../../data/techItemMap.json';
 import { TechItemMap } from '../../types/types.ts';
@@ -15,6 +15,8 @@ const TechFilterBar: React.FC<TechFilterBarProps> = ({
                                                          selectedTech,
                                                          onSelectTech
                                                      }) => {
+
+    const theme = useTheme();
     const techItemMap: TechItemMap = techIconMapRaw;
 
     return (
@@ -39,7 +41,8 @@ const TechFilterBar: React.FC<TechFilterBarProps> = ({
                     onClick={() => onSelectTech(null)}
                     sx={{
                         paddingX: 1,
-
+                        backgroundColor: theme.palette.background.default,
+                        borderColor: theme.palette.primary.main
                     }}
                 />
 

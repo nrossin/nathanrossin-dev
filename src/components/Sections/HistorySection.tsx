@@ -25,7 +25,7 @@ const HistorySection: React.FC = () => {
                     subtitle="Career & Experience Timeline"
         >
 
-            <Box sx={{py: 8}}>
+            <Box sx={{mt: 2}} >
 
                 {isMobile ? (
                     <Box>
@@ -35,11 +35,11 @@ const HistorySection: React.FC = () => {
                                 <Typography variant="h6" sx={{fontWeight: 'bold'}}>
                                     {role.title}
                                 </Typography>
-                                <Typography variant="subtitle2" color="text.secondary">
-                                    {role.company}
+                                <Typography variant="subtitle2" fontStyle="italic" color="text.secondary">
+                                    {role.company} ({role.department})
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" sx={{mb: 1}}>
-                                    {role.startDate} – {role.endDate} ({role.duration})
+                                    {role.startDate} – {role.endDate} {role.duration && `(${role.duration})`}
                                 </Typography>
                                 <List dense>
                                     {role.description.map((item, idx) => (
@@ -87,7 +87,8 @@ const HistorySection: React.FC = () => {
                                     <Typography variant="subtitle1" fontWeight="bold" color="text.secondary">
                                         {role.company}
                                     </Typography>
-                                    <Typography variant="subtitle2" sx={{fontStyle: 'italic'}} color={theme.palette.text.secondary}>
+                                    <Typography variant="subtitle2" sx={{fontStyle: 'italic'}}
+                                                color={theme.palette.text.secondary}>
                                         ({role.department})
                                     </Typography>
 

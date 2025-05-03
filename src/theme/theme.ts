@@ -4,27 +4,27 @@ import { createTheme } from '@mui/material/styles';
 const lightPalette = {
     mode: 'light' as const,
     primary: {
-        main: '#1976d2',
+        main: 'rgba(62, 122, 179, 1)',
         contrastText: '#ffffff',
     },
     secondary: {
-        main: '#ac2bac',
+        main: '#ffffff',
         contrastText: '#ffffff',
     },
     background: {
-        default: 'blue',
-        paper: '#E0E5EEFF',
+        default: '#ffffff',
+        paper: '#dde2ec',
     },
     text: {
         primary: '#000000',
-        secondary: '#555555',
+        secondary: '#2c2c2c',
     },
     divider: '#3d5ee1',
     sectionBackgrounds: {
-        home: 'linear-gradient(315deg, #d5ddf8, #fff 57%);',
-        history: 'linear-gradient(220.55deg, #EAEAEA 0%, #8B8B8B 100%);',
-        projects: 'conic-gradient(at center top, rgb(17, 24, 39), rgb(243, 244, 246), rgb(17, 24, 39));\n',
-        contact: 'linear-gradient(to right, rgb(229, 231, 235), rgb(156, 163, 175), rgb(75, 85, 99));\n',
+        home: 'linear-gradient(135deg,rgba(62, 122, 179, 1) 0%, rgba(179, 179, 179, 1) 85%, rgba(237, 237, 237, 1) 100%);',
+        history: 'linear-gradient(320deg,rgba(62, 122, 179, 1) 0%, rgba(179, 179, 179, 1) 85%, rgba(237, 237, 237, 1) 100%);',
+        projects: 'radial-gradient(circle,rgba(62, 122, 179, 1) 1%, rgba(255, 255, 255, 1) 100%);',
+        contact: 'linear-gradient(45deg, #FFFFFF, #012D5A);',
     },
 };
 

@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { Chip, Tooltip } from '@mui/material';
+import { Chip, Tooltip, useTheme } from '@mui/material';
 import React from 'react';
 import { TechInfo } from '../../types/types.ts';
 
@@ -11,6 +11,9 @@ interface TechChipProps {
 }
 
 const TechChip: React.FC<TechChipProps> = ({link = true, techInfo, selected, onClick}) => {
+
+    const theme = useTheme();
+
     return (
         <Tooltip title={techInfo.description} enterDelay={500} enterNextDelay={500}>
             <Chip
@@ -28,6 +31,8 @@ const TechChip: React.FC<TechChipProps> = ({link = true, techInfo, selected, onC
                 sx={{
                     paddingX: 1,
                     transition: 'background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out', // Animate the light/dark transition
+                    backgroundColor: theme.palette.background.default,
+                    borderColor: theme.palette.primary.main
                 }}
                 onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 
