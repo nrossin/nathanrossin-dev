@@ -27,12 +27,12 @@ const TechChip: React.FC<TechChipProps> = ({link = true, techInfo, selected, onC
                     <Icon icon={techInfo.icon} width="18" height="18" />
                 }
                 variant={selected ? 'filled' : 'outlined'}
-                size="medium" // <--- slight size up
+                size="medium"
                 sx={{
                     paddingX: 1,
-                    transition: 'background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out', // Animate the light/dark transition
-                    backgroundColor: theme.palette.background.default,
-                    borderColor: theme.palette.primary.main
+                    // transition: 'background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out', // Animate the light/dark transition
+                    backgroundColor: selected ? theme.palette.secondary.contrastText : theme.palette.background.default,
+                    color: selected ? theme.palette.primary.contrastText : theme.palette.text.primary
                 }}
                 onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 

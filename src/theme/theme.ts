@@ -9,7 +9,7 @@ const lightPalette = {
     },
     secondary: {
         main: '#ffffff',
-        contrastText: '#ffffff',
+        contrastText: '#6ea8ff',
     },
     background: {
         default: '#ffffff',
@@ -32,11 +32,11 @@ const darkPalette = {
     mode: 'dark' as const,
     primary: {
         main: '#90caf9',
-        contrastText: '#6ea8ff',
+        contrastText: '#fff',
     },
     secondary: {
         main: '#6ea8ff',
-        contrastText: '#000000',
+        contrastText: '#6ea8ff',
     },
     background: {
         default: '#222831',
@@ -46,7 +46,7 @@ const darkPalette = {
         primary: '#ffffff',
         secondary: '#bbbbbb',
     },
-    divider: '#1e1e1e',
+    divider: '#4f4f4f',
     sectionBackgrounds: {
         home: 'linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));',
         history: 'linear-gradient(147deg, #000000 0%, #2c3e50 74%);',

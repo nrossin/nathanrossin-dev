@@ -1,4 +1,4 @@
-import { Alert, Box, Button, TextField } from '@mui/material';
+import { Alert, Box, Button, TextField, useTheme } from '@mui/material';
 import React, { useState } from 'react';
 
 interface ContactFormProps {
@@ -6,6 +6,8 @@ interface ContactFormProps {
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({isMobile}) => {
+
+    const theme = useTheme();
 
     // Form state
     const [formValues, setFormValues] = useState({name: '', email: '', message: ''});
@@ -75,7 +77,7 @@ const ContactForm: React.FC<ContactFormProps> = ({isMobile}) => {
             sx={{
                 maxWidth: 600,
                 // width: isMobile ? '100%' : 'auto',
-                minWidth: isMobile ? '100%': 400,
+                minWidth: isMobile ? '100%' : 400,
                 mx: 'auto',
                 mt: 4,
                 flexShrink: 0,
@@ -128,8 +130,11 @@ const ContactForm: React.FC<ContactFormProps> = ({isMobile}) => {
             <Button
                 type="submit"
                 variant="contained"
-                color="secondary"
                 disabled={submitting}
+                sx={{
+                    color: theme.palette.primary.contrastText,
+                    backgroundColor: theme.palette.secondary.contrastText
+                }}
             >
                 {submitting ? 'Sending...' : 'Send Message'}
             </Button>
