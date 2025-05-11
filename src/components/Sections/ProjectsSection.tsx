@@ -1,11 +1,13 @@
 import { Box, Fade, Grid, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import projects from '../../data/projects.json';
+import { Projects as projects } from "../../data/projects.ts";
 import ProjectCard from '../Projects/ProjectCard.tsx';
 import TechFilterBar from '../Projects/TechFilterBar.tsx';
 import SectionBox from './SectionBox.tsx';
 
 const ProjectsSection: React.FC = () => {
+
+    console.log(JSON.stringify(projects));
 
     // Track selected tech in order to filter projects
     const [selectedTech, setSelectedTech] = useState<string | null>(null);
