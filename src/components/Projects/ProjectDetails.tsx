@@ -110,6 +110,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         ))}
                     </Carousel>
                 </Box>
+                <Box sx={{mt: 1, display: 'flex', gap:6}}>
 
                 {/* Tech Stack */}
                 <Box sx={{mb: 3}}>
@@ -142,23 +143,28 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         </Stack>
                     </Box>
                 )}
+                </Box>
+
 
                 {/* Long Description */}
-                <Box
-                    sx={{
-                        maxHeight: '300px',
-                        overflowY: 'auto',
-                        p: 2,
-                        border: '1px solid',
-                        borderColor: 'divider',
-                        borderRadius: 1,
-                        backgroundColor: theme.palette.background.paper,
-                    }}
-                >
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                        {project.longDescription}
-                    </ReactMarkdown>
-                </Box>
+                {project.longDescription && (
+                    <Box
+                        sx={{
+                            maxHeight: '400px',
+                            overflowY: 'auto',
+                            p: 2,
+                            border: '1px solid',
+                            borderColor: 'divider',
+                            borderRadius: 1,
+                            backgroundColor: theme.palette.background.paper,
+                        }}
+                    >
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                            {project.longDescription}
+                        </ReactMarkdown>
+                    </Box>
+                )}
+
             </DialogContent>
         </Dialog>
     );

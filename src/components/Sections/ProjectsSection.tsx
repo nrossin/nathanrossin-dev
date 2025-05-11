@@ -7,8 +7,6 @@ import SectionBox from './SectionBox.tsx';
 
 const ProjectsSection: React.FC = () => {
 
-    console.log(JSON.stringify(projects));
-
     // Track selected tech in order to filter projects
     const [selectedTech, setSelectedTech] = useState<string | null>(null);
 
