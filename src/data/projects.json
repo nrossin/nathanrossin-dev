@@ -2,6 +2,7 @@
   {
     "title":       "Rep Assist",
     "description": "Complete knowledge management and CRM application suite. What began as a hands-on training project quickly became an indispensable set of tools relied upon by an entire company.",
+    "longDescription": "**Testing** things in the long description.",
     "flags":       [
       "pro",
       "inuse"
@@ -212,5 +213,24 @@
       "express",
       "postgresql"
     ]
-  }
+  },
+  {
+  "title":       "Personal Portfolio",
+  "description": "This is what you're looking at. Where? Right here. When? Right now!",
+  "flags":       [
+    "personal",
+    "pro",
+    "inuse"
+  ],
+  "images":      [
+    {
+      "url":     "/images/portfolio.png"
+    }
+  ],
+  "techStack":   [
+    "react",
+    "typescript",
+    "mui"
+  ]
+}
 ]
