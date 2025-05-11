@@ -17,6 +17,8 @@ import remarkGfm from "remark-gfm";
 import TechChip from "../Common/TechChip.tsx";
 import { Project, TechInfo, TechItemMap } from "../../types/types.ts";
 import techIconMapRaw from "../../data/techItemMap.json";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 interface ProjectDetailsProps {
     open: boolean;
@@ -90,17 +92,21 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                                     alt={image.caption || `Screenshot ${index + 1}`}
                                     style={{
                                         maxWidth: '100%',
+                                        maxHeight: '400px',
+                                        width: "auto",
                                         height: 'auto',
                                         display: 'block',
-                                        margin: '0 auto'
+                                        margin: '0 auto',
+                                        objectFit: 'contain'
                                     }}
+                                    loading="lazy"
                                     onClick={() => window.open(image.url, '_blank')}
                                 />
                                 {image.caption && (
                                     <p className="legend">{image.caption}</p>
                                 )}
-
                             </div>
+
                         ))}
                     </Carousel>
                 </Box>
@@ -124,7 +130,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 {project.additionalTech && project.additionalTech.length > 0 && (
                     <Box sx={{mb: 3}}>
                         <Typography variant="h6" gutterBottom>
-                            Additional Technologies
+                            Additional Technologies Used
                         </Typography>
                         <Stack direction="row" spacing={1} flexWrap="wrap">
                             {project.additionalTech.map((tech) => {
