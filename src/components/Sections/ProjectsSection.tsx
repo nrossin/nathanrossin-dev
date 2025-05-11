@@ -65,7 +65,7 @@ const ProjectsSection: React.FC = () => {
                             timeout={300}
                         >
                             <Box sx={{width: '100%', maxWidth: 400}}>
-                                <ProjectCard {...project} />
+                                <ProjectCard project={project} />
                             </Box>
                         </Fade>
                     </Grid>

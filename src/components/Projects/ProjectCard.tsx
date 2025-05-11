@@ -11,7 +11,6 @@ import {
     Stack,
     Tooltip,
     Typography,
-    useMediaQuery,
     useTheme
 } from '@mui/material';
 import React, { useState } from 'react';
@@ -19,50 +18,27 @@ import { flagInfoMap } from '../../data/flagInfoMap';
 import techIconMapRaw from '../../data/techItemMap.json';
 import { TechItemMap } from '../../types/types.ts';
 import TechChip from '../Common/TechChip.tsx';
-import LightboxDialogDesktop from '../Lightbox/LightboxDialogDesktop.tsx';
-import LightboxDialogMobile from '../Lightbox/LightboxDialogMobile.tsx';
-
-// Images for each project may also include a caption
-interface ProjectImage {
-    url: string;
-    caption?: string;
-}
+import ProjectDetails from "./ProjectDetails.tsx";
+import { Project } from "../../types/types.ts";
 
 interface ProjectCardProps {
-    title: string;
-    description: string;
-    flags?: string[];
-    images: ProjectImage[];
-    techStack: string[];
-    liveDemoUrl?: string;
-    githubUrl?: string;
+    project: Project;
 }
 
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-                                                     title,
-                                                     description,
-                                                     flags,
-                                                     images,
-                                                     techStack,
-                                                     liveDemoUrl,
-                                                     githubUrl,
-                                                 }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
 
     const theme = useTheme();
     const techItemMap: TechItemMap = techIconMapRaw;
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     // Setup state for the image lightbox
-    const [lightboxOpen, setLightboxOpen] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [detailsOpen, setDetailsOpen] = useState(false);
 
     const handleCardClick = () => {
-        setCurrentIndex(0);
-        setLightboxOpen(true);
+        setDetailsOpen(true);
     };
 
-    const coverImage = images[0];
+    const coverImage = project.images[0];
 
     return (
         <>
@@ -84,7 +60,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <CardMedia component="img"
                            height="140"
                            image={coverImage.url}
-                           alt={title}
+                           alt={project.title}
                            sx={{
                                objectFit: 'cover',
                                objectPosition: 'top center'
@@ -93,16 +69,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
                 <CardContent sx={{flexGrow: 1}}>
                     <Typography gutterBottom variant="h5">
-                        {title}
+                        {project.title}
                     </Typography>
-                    {flags && (
+                    {project.flags && (
                         <Stack
                             direction="row"
                             spacing={1}
                             flexWrap="wrap"
                             sx={{mt: 1, mb: 2}}
                         >
-                            {flags.map((flag) => {
+                            {project.flags.map((flag) => {
                                 const info = flagInfoMap[flag];
                                 return info ? (
                                     <Tooltip title={info.tooltip} key={flag}>
@@ -121,15 +97,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
                     }
                     <Typography variant="body2" color={theme.palette.text.secondary} sx={{mb: 2}}>
-                        {description}
+                        {project.description}
                     </Typography>
 
                     {/*Tech Stack Icons*/}
                     <Stack direction="row" flexWrap="wrap" gap={1}>
-                        {techStack.map((tech) => {
+                        {project.techStack.map((tech) => {
                             const techInfo = techItemMap[tech];
                             return (
-                                <TechChip key={tech} techInfo={techInfo} />
+                                <TechChip key={tech} techInfo={techInfo}/>
                             );
                         })}
                     </Stack>
@@ -137,16 +113,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 
                 {/*Action Buttons - if a URL is present for this project */}
-                {(githubUrl || liveDemoUrl) && (
+                {(project.githubUrl || project.liveDemoUrl) && (
                     <>
-                        <Divider sx={{mb: 2, mt: 1}} />
+                        <Divider sx={{mb: 2, mt: 1}}/>
                         <Box sx={{
                             p: 2, pt: 0, display: 'flex', justifyContent: 'space-around'
                         }}>
-                            {githubUrl && (
+                            {project.githubUrl && (
                                 <Button size="small"
-                                        startIcon={<GitHubIcon />}
-                                        href={githubUrl}
+                                        startIcon={<GitHubIcon/>}
+                                        href={project.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()} // Prevent card click opening dialog
@@ -154,10 +130,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                                     GitHub
                                 </Button>
                             )}
-                            {liveDemoUrl && (
+                            {project.liveDemoUrl && (
                                 <Button size="small"
-                                        startIcon={<LaunchIcon />}
-                                        href={liveDemoUrl}
+                                        startIcon={<LaunchIcon/>}
+                                        href={project.liveDemoUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={(e) => e.stopPropagation()} // Prevent card click opening dialog
@@ -172,39 +148,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </Card>
 
             {/*Desktop Lightbox Dialog*/}
-            {isMobile ? (
-                <LightboxDialogMobile
-                    open={lightboxOpen}
-                    images={images}
-                    currentIndex={currentIndex}
-                    onClose={() => setLightboxOpen(false)}
-                    onPrev={() => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)}
-                    onNext={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
-                />
-            ) : (
-                <LightboxDialogDesktop open={lightboxOpen}
-                                       images={images}
-                                       currentIndex={currentIndex}
-                                       onClose={() => setLightboxOpen(false)}
-                                       onPrev={() => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)}
-                                       onNext={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
-                                       goTo={(index) => setCurrentIndex(index)}
-                />
-            )}
-
-            {/*<LightboxDialogDesktop*/}
-            {/*    open={lightboxOpen}*/}
-            {/*    images={images}*/}
-            {/*    currentIndex={currentIndex}*/}
-            {/*    onClose={() => setLightboxOpen(false)}*/}
-            {/*    onPrev={() =>*/}
-            {/*        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)*/}
-            {/*    }*/}
-            {/*    onNext={() =>*/}
-            {/*        setCurrentIndex((prev) => (prev + 1) % images.length)*/}
-            {/*    }*/}
-            {/*    goTo={(index) => setCurrentIndex(index)}*/}
-            {/*/>*/}
+            <ProjectDetails open={detailsOpen}
+                            project={project}
+                            onClose={() => setDetailsOpen(false)}
+            />
         </>
     );
 };
