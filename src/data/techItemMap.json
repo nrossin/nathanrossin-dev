@@ -201,5 +201,13 @@
     "url":         "https://sqlite.org/index.html",
     "description": "SQLite is a lightweight, self-contained, serverless, zero-configuration SQL database engine.",
     "category":    "Database"
+  },
+  "rally": {
+    "label": "Rally",
+    "icon": "logos:broadcom-icon",
+    "url": "https://www.broadcom.com/products/software/value-stream-management/rally",
+    "description": "Broadcom’s Rally is an enterprise agile management solution and comprehensive agile project management tool.",
+    "category": "Other"
+
   }
 }
