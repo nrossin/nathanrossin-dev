@@ -208,6 +208,12 @@
     "url": "https://www.broadcom.com/products/software/value-stream-management/rally",
     "description": "Broadcom’s Rally is an enterprise agile management solution and comprehensive agile project management tool.",
     "category": "Other"
-
+  },
+  "chatgpt": {
+    "label": "ChatGPT",
+    "icon": "hugeicons:chat-gpt",
+    "url": "https://chatgpt.com/",
+    "description": "ChatGPT is an advanced AI chatbot developed by OpenAI that utilizes natural language processing to generate humanlike conversational responses and perform various writing tasks.",
+    "category": "Other"
   }
 }
