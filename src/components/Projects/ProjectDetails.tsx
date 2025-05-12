@@ -76,7 +76,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             </DialogTitle>
 
             <DialogContent dividers>
-                Screenshot Carousel
+                {/*Screenshot Carousel*/}
                 <Box sx={{mb: 3}}>
                     <Carousel
                         showThumbs={false}
