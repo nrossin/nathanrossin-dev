@@ -1,16 +1,49 @@
+import { dedent } from 'ts-dedent'; // Just because I cannot stand messy code files :)
+
 export const Projects = [
     {
         title: "Rep Assist",
         description: "Complete knowledge management and CRM application suite. What began as a hands-on training project quickly became an indispensable set of tools relied upon by an entire company.",
-        longDescription: `
-        # Features
+        longDescription: dedent(`
+        # Overview
 
-- Fast
-- Reliable
-- Easy to use
+        _An expansive suite of applications designed to replace multiple Excel spreadsheets, documentation, etc._
+        
+        ---
+        
+        # Background
+        
+        Rep Assist was originally bourne out of a desire to stop repeatedly typing the same comments over and over again
+        when customers would call in to service their insurance policies ("add driver," "make payment," etc.). The first
+        version of this app was simply known as "Comment Master" and helped to automatically generate standardized
+        comments to be copy/pasted into our CMS system.
+        
+        After changing departments, the scope grew quite rapidly. Our new department was dependent on multiple Excel
+        spreadsheets and other loose documents; there was no central location for the department's knowledge. After
+        spending time working the phones in that department, I began adapting and expanding rep assist to meet the unique
+        needs of that team.
+        
+        Over the next few years, rep assist became a de-facto customer relationship manager and knowledge management suite
+        of applications.
+        
+        ---
+        
+        # Challenges & Solutions
+        
+        **Challenge:** At the beginning, I did not know how to create applications at all.  
+        **Solution:** After researching languages (in 2015), I decided to learn Java and JavaFX, using this particular project as my learning goal.
+        
+        **Challenge:** As the user base grew, the application became less stable  
+        **Solution:** Moved "backend" from a shared network drive to SQL Server database
+        
+        ---
+        
+        # Links
+        
+        - Rep Assist was developed as a proprietary tool for a former employer; public demo/repository is unavailable.
 
-Visit [the site](https://example.com) for more.
-        `,
+        
+        `),
         flags: ["pro", "inuse"],
         images: [{
             url: "/images/rep_assist_About.png",
@@ -32,25 +65,109 @@ Visit [the site](https://example.com) for more.
             caption: "A sampling of the Rep Assist source code, highlighting some of the Utility methods/functions created for the system. Note that this project began as a learning experience for me and I had not yet developed best practices for code organization and documentation."
         }],
         techStack: ["java", "javafx", "sqlserver"],
-        additionalTech: ["intellij"]
-    }, {
+        additionalTech: [
+            "windows", "intellij", "rally", "github"
+        ]
+    },
+    {
         title: "E&S Filing Manager",
         description: "The Excess & Surplus Lines industry's first and only state filings manager! This application helped ensure compliance with state filing regulations, avoiding penalties and fees.",
+        longDescription: dedent(`
+        # Overview
+
+        _A visual database and reporting tool intended to assist the insurance agency with managing the status of 
+        policy filings with each state._
+        
+        ---
+        
+        # Background
+        
+        For many years, our team had used manually-updated Excel spreadsheets to track the state filing statuses of thousands
+        of insurance policies. With errors leading to sometimes massive penalties from state regulatory agencies, there
+        was a genuine need to move to a more modern solution.
+        
+        The industry itself does not already have such a solution available, so I set about creating the first of its kind.
+        
+        The E&S Filing Manager was created as an add-on to Rep Assist that allowed our teams to accurately track, plan, and
+        report on the current filing status for these policies.
+        
+        ---
+        
+        # Impact
+        
+        - 💲 Within the first year of its operation, the agency had saved over $10,000 in state fines and penalties.
+        - ⌛ No more late filings!
+        
+        ---
+        
+        # Links
+        
+        - The E&S Filing Manager was developed as a proprietary tool for a former employer; public demo/repository is unavailable.
+        `),
         flags: ["pro", "inuse"],
         images: [{
             url: "/images/es_filing_manager.png",
             caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
         }],
-        techStack: ["java", "javafx", "sqlserver"]
-    }, {
+        techStack: ["java", "javafx", "sqlserver"],
+        additionalTech: [
+            "windows", "intellij", "rally", "github"
+        ]
+    },
+    {
         title: "Slater - The Acquisitions Manager",
         description: "Data-heavy application designed to assist with (and track) the transferring an agent's book of business to another agency.",
+        longDescription: dedent(`
+        # Overview
+        
+        _While never completed, this app was meant to assist our staff in processing book-of-business transfers from
+        one agent to another (common when agents leave the agency, for example)._
+        
+        ---
+        
+        # Background
+        
+        When agents leave the agency or a policyholder simply requests a different agent, a transfer needs to take
+        place. There are often several steps involved in order to smoothly transition from one agent to another.
+        
+        Slater - The Acquisition Center (so named in jest as it was once simply called A.C.; IYKYK) was built to 
+        keep track of these transfers and ensure the workflow handled smoothly.
+        
+        ---
+        
+        # Links
+        
+        - Slater was developed as a proprietary tool for a former employer; public demo/repository is unavailable.
+        
+        `),
         flags: ["pro", "incomplete", "archived"],
         images: [{url: "/images/slater_01.png"}],
-        techStack: ["java", "javafx", "sqlserver"]
-    }, {
+        techStack: ["java", "javafx", "sqlserver"],
+        additionalTech: ["windows", "intellij", "sqlserver"]
+    },
+    {
         title: "E&S Tax Calculator",
         description: "My first real web-based application, this simple tool assisted underwriters with ensuring the proper tax was being charged on new insurance policies.",
+        longDescription: dedent(`
+        # Overview
+
+        _The E&S Tax Calculator was designed to ensure our underwriters included the correct amount of state taxes
+        when writing a policy._
+        
+        ---
+        
+        # Background
+        
+        This was my first foray into modern web development and I chose to focus on learning React and MUI for the task.
+        Interestingly, this app was never actually deployed to a web server, but instead uses Electron.js to build a
+        native Windows application in which the web app would run.
+        
+        ---
+        
+        # Links
+        
+        - The E&S Tax Calculator was developed as a proprietary tool for a former employer; public demo/repository is unavailable.
+        `),
         flags: ["pro", "inuse"],
         images: [{
             url: "/images/tax_calculator_03.png",
@@ -65,18 +182,34 @@ Visit [the site](https://example.com) for more.
             url: "/images/tax_calculator_02.png",
             caption: "This application ignited my appreciation for the MUI framework, which can be seen in use here."
         }],
-        techStack: ["react", "electron", "typescript", "mui"]
-    }, {
+        techStack: ["react", "electron", "typescript", "mui"],
+        additionalTech: ["windows", "linux", "webstorm", "github"]
+    },
+    {
         title: "Workle",
         flags: ["personal", "archived"],
         description: "Simple, JavaFX clone of the popular word game Wordle. Workle runs locally on Windows machines.",
+        longDescription: dedent(`
+        # Overview
+
+        _Workle was created as a fun side project for my mother, a fan of the original Wordle game. It was then also
+        pitched to my employer at Kraft Lake/Farmers, where it was allowed as a once-a-day game for the department!_
+        
+        ---
+        
+        # Links
+        
+        - [Wordle - NY Times](https://www.nytimes.com/games/wordle/index.html)
+        `),
         images: [{
             url: "images/workle.png",
             caption: "Workle included a daily word (all players played the same word each day), statistics, and simple animations."
         }],
         techStack: ["java", "javafx", "sqlite"],
+        additionalTech: ["windows", "intellij", "github"],
         githubUrl: "https://github.com/nrossin/workle"
-    }, {
+    },
+    {
         title: "Onboarding Manager",
         flags: ["pro", "incomplete", "archived"],
         description: "Incomplete PowerApps application that was to serve as a organizer/manager for onboarding managers and trainers for new employees.",
@@ -88,7 +221,8 @@ Visit [the site](https://example.com) for more.
             caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
         }],
         techStack: ["powerapps"]
-    }, {
+    },
+    {
         title: "Teams Background Switcher",
         flags: ["personal", "inuse"],
         description: "A simple script that extends the available video backgrounds in Microsoft Teams.",
@@ -97,8 +231,10 @@ Visit [the site](https://example.com) for more.
             caption: "Behind the scenes, the script allows users to specify a local folder containing their additional video backgrounds, and switch those for the defaults provided by Microsoft."
         }],
         githubUrl: "https://github.com/nrossin/teams-bg-switcher",
-        techStack: ["python"]
-    }, {
+        techStack: ["python"],
+        additionalTech: ["pycharm"],
+    },
+    {
         title: "Zipuno.io",
         description: "Secure, private, and anonymous file sharing made easy—time bombs included!",
         flags: ["personal", "wip"],
@@ -108,8 +244,10 @@ Visit [the site](https://example.com) for more.
         }],
         githubUrl: "https://github.com/nrossin/zipuno-frontend",
         liveDemoUrl: "https://zipuno-frontend.onrender.com/",
-        techStack: ["react", "typescript", "nodejs", "express", "postgresql"]
-    }, {
+        techStack: ["react", "typescript", "nodejs", "express", "postgresql"],
+        additionalTech: ["windows", "linux", "webstorm", "chatgpt"],
+    },
+    {
         title: "Legend of the Red Dragon - React Clone",
         description: "A simple passion project meant to capture the nostalgic magic of my favorite BBS door game of yesteryear. Still a work in progress!",
         flags: ["personal", "wip"],
@@ -117,12 +255,15 @@ Visit [the site](https://example.com) for more.
             url: "/images/lord-web_01.png",
             caption: "Legend of the Red Dragon was a popular text-based, online role playing game that I grew up with. I am using modern web technology to bring the format back to life."
         }],
-        techStack: ["react", "typescript", "mui", "nodejs", "express", "postgresql"]
-    }, {
+        techStack: ["react", "typescript", "mui", "nodejs", "express", "postgresql"],
+        additionalTech: ["windows", "linux", "webstorm", "chatgpt"],
+    },
+    {
         title: "Personal Portfolio",
         description: "This is what you're looking at. Where? Right here. When? Right now!",
-        flags: ["personal", "pro", "inuse"],
+        flags: ["personal", "pro", "inuse", "wip"],
         images: [{url: "/images/portfolio.png"}],
-        techStack: ["react", "typescript", "mui"]
+        techStack: ["react", "typescript", "mui"],
+        additionalTech: ["windows", "linux", "webstorm", "chatgpt"]
     }
 ]
