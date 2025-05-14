@@ -87,7 +87,14 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     >
                         {project.images.map((image, index) => (
                             <Stack key={index}
-                                   sx={{direction: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                                   sx={{
+                                       direction: 'column',
+                                       justifyContent: 'center',
+                                       alignItems: 'center',
+                                       cursor: 'pointer'
+                                   }}
+                                   onClick={() => window.open(image.url, '_blank')}
+                            >
                                 <img
                                     src={image.url}
                                     alt={image.caption || `Screenshot ${index + 1}`}
