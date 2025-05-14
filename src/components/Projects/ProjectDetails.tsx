@@ -45,7 +45,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             icon: '',
             description: tech,
         }
-
     }
 
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -71,7 +70,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         color: theme.palette.grey[500],
                     }}
                 >
-                    <CloseIcon/>
+                    <CloseIcon />
                 </IconButton>
             </DialogTitle>
 
@@ -81,12 +80,14 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     <Carousel
                         showThumbs={false}
                         infiniteLoop
+                        showIndicators={true}
                         useKeyboardArrows
                         dynamicHeight={false}
                         emulateTouch
                     >
                         {project.images.map((image, index) => (
-                            <div key={index}>
+                            <Stack key={index}
+                                   sx={{direction: 'column', justifyContent: 'center', alignItems: 'center'}}>
                                 <img
                                     src={image.url}
                                     alt={image.caption || `Screenshot ${index + 1}`}
@@ -97,52 +98,63 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                                         height: 'auto',
                                         display: 'block',
                                         margin: '0 auto',
-                                        objectFit: 'contain'
+                                        objectFit: 'contain',
                                     }}
-                                    loading="lazy"
-                                    onClick={() => window.open(image.url, '_blank')}
-                                />
-                                {image.caption && (
-                                    <p className="legend">{image.caption}</p>
-                                )}
-                            </div>
 
+                                    loading="lazy"
+                                />
+                                {/*{image.caption && (*/}
+                                {/*    // <p className="legend">{image.caption}</p>*/}
+                                {/*    <Box sx={{*/}
+                                {/*        backgroundColor: theme.palette.background.paper,*/}
+                                {/*        width: '75%',*/}
+                                {/*        borderRadius: '10px',*/}
+                                {/*        mt: 1,*/}
+                                {/*        pl: 3, pr: 3,*/}
+                                {/*        pt: 1, pb: 1*/}
+                                {/*    }}*/}
+                                {/*    >*/}
+                                {/*        <Typography variant="caption">{image.caption}</Typography>*/}
+                                {/*    </Box>*/}
+
+                                {/*)}*/}
+                            </Stack>
                         ))}
                     </Carousel>
                 </Box>
-                <Box sx={{mt: 1, display: 'flex', gap:6}}>
+                <Box sx={{mt: 1, display: 'flex', gap: 6}}>
 
-                {/* Tech Stack */}
-                <Box sx={{mb: 3}}>
-                    <Typography variant="h6" gutterBottom>
-                        Tech Stack
-                    </Typography>
-                    <Stack direction="row" spacing={1} flexWrap="wrap">
-                        {project.techStack.map((tech) => {
-                            const techInfo = getTechInfo(tech);
-                            return (
-                                <TechChip key={tech} techInfo={techInfo}/>
-                            );
-                        })}
-                    </Stack>
-                </Box>
-
-                {/* Additional Tech */}
-                {project.additionalTech && project.additionalTech.length > 0 && (
+                    {/* Tech Stack */}
                     <Box sx={{mb: 3}}>
                         <Typography variant="h6" gutterBottom>
-                            Additional Technologies Used
+                            Tech Stack
                         </Typography>
                         <Stack direction="row" spacing={1} flexWrap="wrap">
-                            {project.additionalTech.map((tech) => {
+                            {project.techStack.map((tech) => {
                                 const techInfo = getTechInfo(tech);
                                 return (
-                                    <TechChip key={tech} techInfo={techInfo}/>
+                                    <TechChip key={tech} techInfo={techInfo} />
                                 );
                             })}
                         </Stack>
                     </Box>
-                )}
+
+                    {/* Additional Tech */}
+                    {project.additionalTech && project.additionalTech.length > 0 && (
+                        <Box sx={{mb: 3}}>
+                            <Typography variant="h6" gutterBottom>
+                                Additional Technologies Used
+                            </Typography>
+                            <Stack direction="row" spacing={1} flexWrap="wrap">
+                                {project.additionalTech.map((tech) => {
+                                    const techInfo = getTechInfo(tech);
+                                    return (
+                                        <TechChip key={tech} techInfo={techInfo} />
+                                    );
+                                })}
+                            </Stack>
+                        </Box>
+                    )}
                 </Box>
 
 
@@ -155,7 +167,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                             p: 2,
                             border: '1px solid',
                             borderColor: 'divider',
-                            borderRadius: 1,
+                            borderRadius: "10px",
                             backgroundColor: theme.palette.background.paper,
                         }}
                     >
