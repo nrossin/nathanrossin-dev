@@ -115,6 +115,32 @@ export const Projects = [
         ]
     },
     {
+        title: "Alteryx Workflows",
+        description: "Detailed ETL workflows built to ingest, format, and output large amounts of data.",
+        longDescription: dedent(`
+        # Overview
+        
+        _Our department received and provided numerous reports during our daily business—I used Alteryx to make sense of it all._
+        
+        ---
+        
+        # Background
+        
+        My philosophy while creating these workflows was that they must be human readable and understandable by not only myself.
+        As such, I spent an extensive amount of time ensuring each step was properly documented and organized in an intuitive manner.
+        
+        ---
+        
+        # Links
+        
+        - These workflows were developed as proprietary tools for a former employer; public demo/repository is unavailable.
+        
+        `),
+        flags: ["pro", "archived"],
+        images: [{url: "/images/alteryx-ace.png"},{url: "/images/alteryx-acquisitions.png"}],
+        techStack: ["alteryx", "sqlserver"]
+    },
+    {
         title: "Slater - The Acquisitions Manager",
         description: "Data-heavy application designed to assist with (and track) the transferring an agent's book of business to another agency.",
         longDescription: dedent(`
