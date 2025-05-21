@@ -66,7 +66,7 @@ export const Projects = [
         }],
         techStack: ["java", "javafx", "sqlserver"],
         additionalTech: [
-            "windows", "intellij", "rally", "github"
+            "intellij", "rally", "github"
         ]
     },
     {
@@ -111,7 +111,7 @@ export const Projects = [
         }],
         techStack: ["java", "javafx", "sqlserver"],
         additionalTech: [
-            "windows", "intellij", "rally", "github"
+            "intellij", "rally", "github"
         ]
     },
     {
@@ -143,7 +143,7 @@ export const Projects = [
         flags: ["pro", "incomplete", "archived"],
         images: [{url: "/images/slater_01.png"}],
         techStack: ["java", "javafx", "sqlserver"],
-        additionalTech: ["windows", "intellij", "sqlserver"]
+        additionalTech: ["intellij", "sqlserver"]
     },
     {
         title: "E&S Tax Calculator",
@@ -183,7 +183,7 @@ export const Projects = [
             caption: "This application ignited my appreciation for the MUI framework, which can be seen in use here."
         }],
         techStack: ["react", "electron", "typescript", "mui"],
-        additionalTech: ["windows", "linux", "webstorm", "github"]
+        additionalTech: ["linux", "webstorm", "github"]
     },
     {
         title: "Workle",
@@ -206,7 +206,7 @@ export const Projects = [
             caption: "Workle included a daily word (all players played the same word each day), statistics, and simple animations."
         }],
         techStack: ["java", "javafx", "sqlite"],
-        additionalTech: ["windows", "intellij", "github"],
+        additionalTech: ["intellij", "github"],
         githubUrl: "https://github.com/nrossin/workle"
     },
     {
@@ -237,7 +237,7 @@ export const Projects = [
     {
         title: "Zipuno.io",
         description: "Secure, private, and anonymous file sharing made easy—time bombs included!",
-        flags: ["personal", "wip"],
+        flags: ["personal", "wip", "ai"],
         images: [{
             url: "/images/zipuno_01.png",
             caption: "First personal app to include backend coding, Zipuno.io utilizes a PostgreSQL database to facilitate file sharing."
@@ -245,25 +245,34 @@ export const Projects = [
         githubUrl: "https://github.com/nrossin/zipuno-frontend",
         liveDemoUrl: "https://zipuno-frontend.onrender.com/",
         techStack: ["react", "typescript", "nodejs", "express", "postgresql"],
-        additionalTech: ["windows", "linux", "webstorm", "chatgpt"],
+        additionalTech: ["linux", "webstorm", "chatgpt"],
     },
     {
         title: "Legend of the Red Dragon - React Clone",
         description: "A simple passion project meant to capture the nostalgic magic of my favorite BBS door game of yesteryear. Still a work in progress!",
-        flags: ["personal", "wip"],
+        flags: ["personal", "wip", "ai"],
         images: [{
             url: "/images/lord-web_01.png",
             caption: "Legend of the Red Dragon was a popular text-based, online role playing game that I grew up with. I am using modern web technology to bring the format back to life."
         }],
         techStack: ["react", "typescript", "mui", "nodejs", "express", "postgresql"],
-        additionalTech: ["windows", "linux", "webstorm", "chatgpt"],
+        additionalTech: ["linux", "webstorm", "chatgpt"],
     },
     {
         title: "Personal Portfolio",
         description: "This is what you're looking at. Where? Right here. When? Right now!",
-        flags: ["personal", "pro", "inuse", "wip"],
+        flags: ["personal", "pro", "inuse", "wip", "ai"],
         images: [{url: "/images/portfolio.png"}],
         techStack: ["react", "typescript", "mui"],
-        additionalTech: ["windows", "linux", "webstorm", "chatgpt"]
+        additionalTech: ["linux", "webstorm", "chatgpt"]
+    },
+    {
+        title: "Untitled Project",
+        description: "A new mobile app has just begun!",
+        longDescription: "This will be my first mobile-first application and is being created to not only be useful, but also as a learning project for me. Utilizing React Native for the first time, the goal is to deploy this to iOS, Android, and Web, with potential monetization in the future!",
+        flags: ["personal", "wip", "ai"],
+        images: [{url: "/images/home-pos.png"}],
+        techStack: ["react", "typescript", "react-native", "react-paper", "expo"],
+        additionalTech: ["linux", "webstorm", "chatgpt"]
     }
 ]
