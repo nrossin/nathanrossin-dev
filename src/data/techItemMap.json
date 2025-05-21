@@ -1,206 +1,199 @@
 {
-  "react":      {
-    "label":       "React",
-    "category":    "Frontend",
-    "icon":        "logos:react",
-    "url":         "https://react.dev/",
+  "react": {
+    "label": "React",
+    "category": "Frontend",
+    "icon": "logos:react",
+    "url": "https://react.dev/",
     "description": "A JavaScript library for building fast, interactive user interfaces."
   },
-  "java":       {
-    "label":       "Java",
-    "category":    "Backend",
-    "icon":        "logos:java",
-    "url":         "https://dev.java/",
+  "java": {
+    "label": "Java",
+    "category": "Backend",
+    "icon": "logos:java",
+    "url": "https://dev.java/",
     "description": "A high-level, class-based programming language used for building cross-platform applications."
   },
-  "javafx":     {
-    "label":       "JavaFX",
-    "category":    "Frontend",
-    "icon":        "nonicons:java-16",
-    "url":         "https://openjfx.io/",
+  "javafx": {
+    "label": "JavaFX",
+    "category": "Frontend",
+    "icon": "nonicons:java-16",
+    "url": "https://openjfx.io/",
     "description": "A Java library for building rich client desktop applications with modern UIs."
   },
   "typescript": {
-    "label":       "TypeScript",
-    "category":    "Frontend",
-    "icon":        "logos:typescript-icon",
-    "url":         "https://www.typescriptlang.org/",
+    "label": "TypeScript",
+    "category": "Frontend",
+    "icon": "logos:typescript-icon",
+    "url": "https://www.typescriptlang.org/",
     "description": "A superset of JavaScript that adds static typing to the language."
   },
   "javascript": {
-    "label":       "Javascript",
-    "category":    "Frontend",
-    "icon":        "logos:javascript",
-    "url":         "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "label": "Javascript",
+    "category": "Frontend",
+    "icon": "logos:javascript",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     "description": "The programming language of the Web, used for building dynamic websites and applications."
   },
-  "nodejs":     {
-    "label":       "Node.js",
-    "category":    "Backend",
-    "icon":        "logos:nodejs-icon",
-    "url":         "https://nodejs.org/en",
+  "nodejs": {
+    "label": "Node.js",
+    "category": "Backend",
+    "icon": "logos:nodejs-icon",
+    "url": "https://nodejs.org/en",
     "description": "A JavaScript runtime built on Chrome's V8 engine for building fast, scalable server applications."
   },
-  "express":    {
-    "label":       "Express.js",
-    "category":    "Backend",
-    "icon":        "simple-icons:express",
-    "url":         "https://expressjs.com/",
+  "express": {
+    "label": "Express.js",
+    "category": "Backend",
+    "icon": "simple-icons:express",
+    "url": "https://expressjs.com/",
     "description": "A minimal and flexible Node.js web application framework for building APIs and web apps."
   },
-  "mongodb":    {
-    "label":       "MongoDB",
-    "category":    "Database",
-    "icon":        "logos:mongodb-icon",
-    "url":         "https://mongodb.com/",
+  "mongodb": {
+    "label": "MongoDB",
+    "category": "Database",
+    "icon": "logos:mongodb-icon",
+    "url": "https://mongodb.com/",
     "description": "A NoSQL document database designed for high scalability and flexibility."
   },
   "postgresql": {
-    "label":       "PostgreSQL",
-    "category":    "Database",
-    "icon":        "devicon:postgresql",
-    "url":         "https://www.postgresql.org/",
+    "label": "PostgreSQL",
+    "category": "Database",
+    "icon": "devicon:postgresql",
+    "url": "https://www.postgresql.org/",
     "description": "An open-source relational database system known for its reliability and advanced features."
   },
-  "sqlserver":  {
-    "label":       "SQL Server",
-    "category":    "Database",
-    "icon":        "devicon:microsoftsqlserver",
-    "url":         "https://www.microsoft.com/en-us/sql-server/",
+  "sqlserver": {
+    "label": "SQL Server",
+    "category": "Database",
+    "icon": "devicon:microsoftsqlserver",
+    "url": "https://www.microsoft.com/en-us/sql-server/",
     "description": "A relational database management system developed by Microsoft, used in enterprise environments."
   },
-  "powerapps":  {
-    "label":       "Microsoft Power Apps",
-    "category":    "Other",
-    "icon":        "arcticons:microsoft-power-apps",
-    "url":         "https://www.microsoft.com/en-us/power-platform/products/power-apps",
+  "powerapps": {
+    "label": "Microsoft Power Apps",
+    "category": "Other",
+    "icon": "arcticons:microsoft-power-apps",
+    "url": "https://www.microsoft.com/en-us/power-platform/products/power-apps",
     "description": "A Microsoft service for building low-code custom applications quickly and easily."
   },
-  "electron":   {
-    "label":       "Electron.js",
-    "category":    "Frontend",
-    "icon":        "devicon:electron",
-    "url":         "https://www.electronjs.org/",
+  "electron": {
+    "label": "Electron.js",
+    "category": "Frontend",
+    "icon": "devicon:electron",
+    "url": "https://www.electronjs.org/",
     "description": "A framework for building cross-platform desktop apps using web technologies like JavaScript, HTML, and CSS."
   },
-  "mui":        {
-    "label":       "Material UI",
-    "category":    "Frontend",
-    "icon":        "logos:material-ui",
-    "url":         "https://mui.com/",
+  "mui": {
+    "label": "Material UI",
+    "category": "Frontend",
+    "icon": "logos:material-ui",
+    "url": "https://mui.com/",
     "description": "A popular React UI framework offering prebuilt, customizable components based on Material Design."
   },
-  "python":     {
-    "label":       "Python",
-    "category":    "Backend",
-    "icon":        "material-icon-theme:python",
-    "url":         "https://www.python.org/",
+  "python": {
+    "label": "Python",
+    "category": "Backend",
+    "icon": "material-icon-theme:python",
+    "url": "https://www.python.org/",
     "description": "A high-level programming language known for its readability and vast ecosystem for web, data, and automation."
   },
-  "intellij":   {
-    "label":       "ItelliJ IDEA",
-    "icon":        "devicon:intellij",
-    "url":         "https://www.jetbrains.com/intellij/",
+  "intellij": {
+    "label": "ItelliJ IDEA",
+    "icon": "devicon:intellij",
+    "url": "https://www.jetbrains.com/intellij/",
     "description": "Java/Kotlin IDE by JetBrains.",
-    "category":    "IDEs"
+    "category": "IDEs"
   },
-  "pycharm":    {
-    "label":       "PyCharm",
-    "icon":        "devicon:pycharm",
-    "url":         "https://www.jetbrains.com/pycharm/",
+  "pycharm": {
+    "label": "PyCharm",
+    "icon": "devicon:pycharm",
+    "url": "https://www.jetbrains.com/pycharm/",
     "description": "Python IDE by JetBrains.",
-    "category":    "IDEs"
+    "category": "IDEs"
   },
-  "webstorm":   {
-    "label":       "WebStorm",
-    "icon":        "devicon:webstorm",
-    "url":         "https://www.jetbrains.com/webstorm/",
+  "webstorm": {
+    "label": "WebStorm",
+    "icon": "devicon:webstorm",
+    "url": "https://www.jetbrains.com/webstorm/",
     "description": "Web Application IDE by JetBrains.",
-    "category":    "IDEs"
+    "category": "IDEs"
   },
-  "phpstorm":   {
-    "label":       "PHPStorm",
-    "icon":        "devicon:phpstorm",
-    "url":         "https://www.jetbrains.com/phpstorm/",
+  "phpstorm": {
+    "label": "PHPStorm",
+    "icon": "devicon:phpstorm",
+    "url": "https://www.jetbrains.com/phpstorm/",
     "description": "PHP IDE by JetBrains.",
-    "category":    "IDEs"
+    "category": "IDEs"
   },
-  "vscode":     {
-    "label":       "Visual Studio Code",
-    "icon":        "devicon:vscode",
-    "url":         "https://code.visualstudio.com/",
+  "vscode": {
+    "label": "Visual Studio Code",
+    "icon": "devicon:vscode",
+    "url": "https://code.visualstudio.com/",
     "description": "Visual Studio Code (VS Code) is a free, open-source code editor developed by Microsoft.",
-    "category":    "IDEs"
+    "category": "IDEs"
   },
-  "poweron":     {
-    "label":       "PowerOn",
-    "icon":        "material-symbols:code",
-    "url":         "https://jackhenry.dev//",
+  "poweron": {
+    "label": "PowerOn",
+    "icon": "material-symbols:code",
+    "url": "https://jackhenry.dev//",
     "description": "Proprietary programming language by JHA, primarily used with the Symitar core for credit unions",
-    "category":    "Backend"
+    "category": "Backend"
   },
-  "php":        {
-    "label":       "PHP",
-    "icon":        "material-icon-theme:php-elephant",
-    "url":         "https://www.php.net/",
+  "php": {
+    "label": "PHP",
+    "icon": "material-icon-theme:php-elephant",
+    "url": "https://www.php.net/",
     "description": "PHP, standing for Hypertext Preprocessor, is a widely used, open-source, server-side scripting language primarily used for web development.",
-    "category":    "Backend"
+    "category": "Backend"
   },
-  "alteryx":    {
-    "label":       "Alteryx",
-    "icon":        "simple-icons:alteryx",
-    "url":         "https://www.alteryx.com/",
+  "alteryx": {
+    "label": "Alteryx",
+    "icon": "simple-icons:alteryx",
+    "url": "https://www.alteryx.com/",
     "description": "Alteryx is a low-code/no-code platform for data analytics and workflow automation.",
-    "category":    "Other"
+    "category": "Other"
   },
-  "jira":       {
-    "label":       "Atlassian Jira",
-    "icon":        "devicon:jira",
-    "url":         "https://www.atlassian.com/software/jira/",
+  "jira": {
+    "label": "Atlassian Jira",
+    "icon": "devicon:jira",
+    "url": "https://www.atlassian.com/software/jira/",
     "description": "Atlassian's project management and issue tracking tool.",
-    "category":    "Other"
+    "category": "Other"
   },
-  "gitlab":     {
-    "label":       "GitLab",
-    "icon":        "devicon:gitlab",
-    "url":         "https://www.microsoft.com/en-us/windows/?r=1",
+  "gitlab": {
+    "label": "GitLab",
+    "icon": "devicon:gitlab",
+    "url": "https://about.gitlab.com/",
     "description": "GitLab is a web-based Git repository manager and DevOps platform that enables software development teams to collaborate, manage their code, and automate their CI/CD pipelines.",
-    "category":    "Other"
+    "category": "Other"
   },
-  "github":     {
-    "label":       "GitHub",
-    "icon":        "devicon:github",
-    "url":         "https://www.microsoft.com/en-us/windows/?r=1",
+  "github": {
+    "label": "GitHub",
+    "icon": "devicon:github",
+    "url": "https://github.com/nrossin",
     "description": "GitHub is a cloud-based platform for version control and collaboration, primarily used by software developers.",
-    "category":    "Other"
+    "category": "Other"
   },
-  "windows":    {
-    "label":       "Windows",
-    "icon":        "devicon:windows8",
-    "url":         "https://www.microsoft.com/en-us/windows/?r=1",
+  "linux": {
+    "label": "Linux",
+    "icon": "devicon:linux",
+    "url": "https://kernel.org//",
     "description": "",
-    "category":    "Operating Systems"
+    "category": "Operating Systems"
   },
-  "linux":      {
-    "label":       "Linux",
-    "icon":        "devicon:linux",
-    "url":         "https://kernel.org//",
-    "description": "",
-    "category":    "Operating Systems"
-  },
-  "aix":        {
-    "label":       "IBM AIX",
-    "icon":        "logos:aix",
-    "url":         "https://www.ibm.com/products/aix",
+  "aix": {
+    "label": "IBM AIX",
+    "icon": "logos:aix",
+    "url": "https://www.ibm.com/products/aix",
     "description": "IBM AIX is a proprietary Unix operating system developed and sold by IBM since 1986.",
-    "category":    "Operating Systems"
+    "category": "Operating Systems"
   },
-  "sqlite":     {
-    "label":       "SQLite",
-    "icon":        "devicon:sqlite",
-    "url":         "https://sqlite.org/index.html",
+  "sqlite": {
+    "label": "SQLite",
+    "icon": "devicon:sqlite",
+    "url": "https://sqlite.org/index.html",
     "description": "SQLite is a lightweight, self-contained, serverless, zero-configuration SQL database engine.",
-    "category":    "Database"
+    "category": "Database"
   },
   "rally": {
     "label": "Rally",
@@ -215,5 +208,26 @@
     "url": "https://chatgpt.com/",
     "description": "ChatGPT is an advanced AI chatbot developed by OpenAI that utilizes natural language processing to generate humanlike conversational responses and perform various writing tasks.",
     "category": "Other"
+  },
+  "react-native": {
+    "label": "React Native",
+    "icon": "devicon:reactnative-wordmark",
+    "url": "https://reactnative.dev/",
+    "description": "React Native is a framework developed by Meta for building cross-platform mobile apps using JavaScript and React. It allows developers to write code once and deploy to both iOS and Android with near-native performance.",
+    "category": "Frontend"
+  },
+  "expo": {
+    "label": "Expo",
+    "icon": "file-icons:expo",
+    "url": "https://expo.dev/",
+    "description": "Expo is an open-source platform for developing, building, and deploying React Native apps faster. It includes tools, libraries, and services that simplify development, especially for teams and solo developers without native code experience.",
+    "category": "Frontend"
+  },
+  "react-paper": {
+    "label": "React Native Paper",
+    "icon": "mdi:material-ui",
+    "url": "https://callstack.github.io/react-native-paper//",
+    "description": "React Native Paper is a high-quality, themable component library for React Native, based on Material Design guidelines. It provides ready-to-use UI elements with built-in support for dark/light themes and accessibility.",
+    "category": "Frontend"
   }
 }

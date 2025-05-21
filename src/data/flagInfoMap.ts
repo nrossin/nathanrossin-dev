@@ -34,5 +34,10 @@ export const flagInfoMap: {
         label: 'Incomplete',
         tooltip: 'This project was not actually completed beyond POC or beta',
         color: 'error'
+    },
+    ai: {
+        label: 'AI',
+        tooltip: 'AI (most likely ChatGPT) was utilized to some degree while building this project.',
+        color: 'info'
     }
 };
