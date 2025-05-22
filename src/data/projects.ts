@@ -268,7 +268,6 @@ export const Projects = [
             url: "/images/zipuno_01.png",
             caption: "First personal app to include backend coding, Zipuno.io utilizes a PostgreSQL database to facilitate file sharing."
         }],
-        githubUrl: "https://github.com/nrossin/zipuno-frontend",
         liveDemoUrl: "https://zipuno-frontend.onrender.com/",
         techStack: ["react", "typescript", "nodejs", "express", "postgresql"],
         additionalTech: ["linux", "webstorm", "chatgpt"],
@@ -290,7 +289,8 @@ export const Projects = [
         flags: ["personal", "pro", "inuse", "wip", "ai"],
         images: [{url: "/images/portfolio.png"}],
         techStack: ["react", "typescript", "mui"],
-        additionalTech: ["linux", "webstorm", "chatgpt"]
+        additionalTech: ["linux", "webstorm", "chatgpt"],
+        githubUrl: "https://github.com/nrossin/nathanrossin-dev"
     },
     {
         title: "Untitled Project",
