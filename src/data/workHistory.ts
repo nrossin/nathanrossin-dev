@@ -17,12 +17,10 @@ export const workHistory: WorkExperience[] = [
         endDate: 'Present',
         duration: '',
         description: [
-            'Develop, implement, and maintain multiple custom software solutions utilizing various development tools' +
-            ' and languages (PHP, Java, PowerOn, Bash, etc.).',
-            'Provide project oversight and assist in developing best practices for conversion of SymformPDF to PowerFrame Docs solutions ' +
-            '(proprietary JHA systems).',
-            'Consistently participate in Agile-related activities such as backlog grooming and sprint planning, utilizing the' +
-            ' Jira platform for project/task management.'
+            'Partnered with BAs, QE, and  stakeholders to define clear acceptance criteria and edge cases — preventing ambiguous requirements and reducing rework.',
+            'Architected and maintained PHP, Java, and PowerOn microservices that power lending, deposit, and online banking platforms for 350,000+ members daily.',
+            'Led the SymformPDF-to-PowerFrame Docs conversion project—authored 6+ Confluence pages and provided hands-on training sessions for development team.',
+            'Facilitated sprint planning and backlog grooming in Jira, promoting Agile methodology adherence.'
         ]
     },
     {
@@ -33,11 +31,9 @@ export const workHistory: WorkExperience[] = [
         endDate: 'July 2023',
         duration: '1 year, 3 months',
         description: [
-            'Collaborated with end-users to design and code a visually appealing web application utilizing HTML, CSS, JavaScript, React.js, and Electron.js.',
-            'Utilized version management system (Git, GitHub) to manage source code changes and release deployment of React application.',
-            'Created SharePoint team sites with integrated Power Apps functionality',
-            'Developed ETL processes to extract, transform and load data from various sources such as MS SQL Server, Excel, CSV, and flat files into target database and other output.',
-            'Continued responsibilities from prior role below.',
+            'Collaborated with end-users to design and ship a React/Electron desktop application that supports 12+ underwriters, ensuring state compliance and streamlining data entry and validation into a single interface.',
+            'Built custom SharePoint sites with embedded Power Apps and Forms, reducing submission errors by streamlining form validation.',
+            'Established Git/GitHub strategies for branching, review, and deployment.',
         ]
     },
     {
@@ -48,44 +44,9 @@ export const workHistory: WorkExperience[] = [
         endDate: 'January 2022',
         duration: '5 years, 8 months',
         description: [
-            'Improved existing codebase through refactoring techniques like creating modular functions with fewer lines of code.',
-            'Developed and maintained desktop applications using Java, JavaFX, Git, and SQL Server. These applications are relied upon by up to 150 employees on a daily basis.',
-            'Utilized version control system (Git) to manage source code changes.',
-            'Resolved customer issues by debugging existing application codebase or developing new features in a timely manner.',
-            'Provided production support to end-users in order to troubleshoot any problems they may be experiencing with the software applications.',
-            'Created technical documentation including design documents, user manuals, installation guides.',
-            'Evaluated existing applications to reprogram, update and add new features.',
-            'Designed, built, tested, and deployed customized applications, significantly improving operational ' +
-            'efficiency and user productivity.',
-            'Developed a proprietary database-driven knowledge management system, supporting over 100 daily users,' +
-            ' enhancing organizational communication and workflow management.',
-            'Engineered the industry\'s first Excess & Surplus Lines state filings management system, automating' +
-            ' previously manual processes and setting a new benchmark in regulatory compliance.',
-            'Integrated data from existing Farmers Insurance databases to enhance reporting capabilities and provide' +
-            ' detailed insights for exclusive agents'
+            'Developed a proprietary, knowledge management system, supporting over 100 employees daily, accelerating service, document retrieval, and collaboration.',
+            'Engineered an Excess & Surplus Lines filings system—automated 100% of manual compliance workflows across all 50 states.',
+            'Built Alteryx- and SQL-based ETL pipelines to centralize policy and agency data from MS SQL, Excel, and CSV sources—transforming fragmented files into a single, maintainable database schema (MS SQL).',
         ]
     },
-    {
-        company: 'Farmers Insurance',
-        department: 'Farmers Direct Service',
-        title: 'Service Advocate II',
-        startDate: 'October 2015',
-        endDate: 'May 2016',
-        duration: '7 months',
-        description: [
-            'Speak with customers by phone to provide information about products or services, modify existing policies, cancel accounts, or obtain details of complaints.',
-            'Process customer premium payments.'
-        ]
-    },
-    {
-        company: 'Farmers Insurance',
-        department: '21st Century Insurance',
-        title: 'Customer Service Representative',
-        startDate: 'October 2015',
-        endDate: 'May 2016',
-        duration: '2 years, 1 month',
-        description: [
-            'Keep records of customer interactions or transactions, recording details of inquiries, complaints, or comments, as well as actions take.',
-        ]
-    }
 ];

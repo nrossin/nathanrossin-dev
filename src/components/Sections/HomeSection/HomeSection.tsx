@@ -38,13 +38,12 @@ const HomeSection: React.FC = () => {
                 />
 
                 <Typography variant="body1" sx={{maxWidth: 600}}>
-                    Welcome! I am a full-stack developer and software engineer with a passion for creating clean,
-                    readable,
-                    and modular code. With almost 10 years of experience building custom applications using various
-                    platforms
-                    and frameworks, I pride myself on having the skills necessary to determine what the business
-                    actually
-                    needs and then delivering beyond their expectations!
+                    Welcome! I am a seasoned full-stack developer with 9½ years’ experience building web and desktop
+                    applications built in Java, JavaFX, React, and PHP.
+                    <br /><br />
+                    I am skilled at translating business needs into clean, maintainable code and communicating technical
+                    solutions back to non-technical stakeholders and business owners. Passionate about root-cause
+                    analysis, driving agile teams forward, and delivering valuable ROI.
                     <br /><br />
                     Please feel free to check out my Projects below and let me know if you have any questions or
                     comments!
