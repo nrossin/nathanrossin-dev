@@ -38,7 +38,7 @@ const HomeSection: React.FC = () => {
                 />
 
                 <Typography variant="body1" sx={{maxWidth: 600}}>
-                    Welcome! I am a seasoned full-stack developer with 9½ years’ experience building web and desktop
+                    Welcome! I am a seasoned full-stack developer with 10 years’ experience building web and desktop
                     applications built in Java, JavaFX, React, and PHP.
                     <br /><br />
                     I am skilled at translating business needs into clean, maintainable code and communicating technical

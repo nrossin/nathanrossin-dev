@@ -49,4 +49,27 @@ export const workHistory: WorkExperience[] = [
             'Built Alteryx- and SQL-based ETL pipelines to centralize policy and agency data from MS SQL, Excel, and CSV sources—transforming fragmented files into a single, maintainable database schema (MS SQL).',
         ]
     },
+    {
+        company: 'Farmers Insurance',
+        department: 'Farmers Direct Service',
+        title: 'Service Advocate II',
+        startDate: 'October 2015',
+        endDate: 'May 2016',
+        duration: '7 months',
+        description: [
+            'Handled 30+ customer calls daily—fielded policy changes, billing inquiries and complaints, consistently exceeding SLA targets.',
+            'Conceived and prototyped a custom Java application to streamline and standardize documentation of customer interactions, which led to my transfer into a formal development role.'
+        ]
+    },
+    {
+        company: 'Farmers Insurance',
+        department: '21st Century Insurance',
+        title: 'Customer Service Representative',
+        startDate: 'September 2013',
+        endDate: 'October 2015',
+        duration: '2 years, 1 month',
+        description: [
+            'Keep records of customer interactions or transactions, recording details of inquiries, complaints, or comments, as well as actions take.',
+        ]
+    }
 ];
