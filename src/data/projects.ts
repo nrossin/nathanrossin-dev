@@ -263,7 +263,7 @@ export const Projects = [
     {
         title: "Zipuno.io",
         description: "Secure, private, and anonymous file sharing made easy—time bombs included!",
-        flags: ["personal", "wip", "ai"],
+        flags: ["personal", "wip"],
         images: [{
             url: "/images/zipuno_01.png",
             caption: "First personal app to include backend coding, Zipuno.io utilizes a PostgreSQL database to facilitate file sharing."
@@ -275,7 +275,7 @@ export const Projects = [
     {
         title: "Legend of the Red Dragon - React Clone",
         description: "A simple passion project meant to capture the nostalgic magic of my favorite BBS door game of yesteryear. Still a work in progress!",
-        flags: ["personal", "wip", "ai"],
+        flags: ["personal", "wip"],
         images: [{
             url: "/images/lord-web_01.png",
             caption: "Legend of the Red Dragon was a popular text-based, online role playing game that I grew up with. I am using modern web technology to bring the format back to life."
@@ -286,19 +286,19 @@ export const Projects = [
     {
         title: "Personal Portfolio",
         description: "This is what you're looking at. Where? Right here. When? Right now!",
-        flags: ["personal", "pro", "inuse", "wip", "ai"],
+        flags: ["personal", "pro", "inuse", "wip"],
         images: [{url: "/images/portfolio.png"}],
         techStack: ["react", "typescript", "mui"],
         additionalTech: ["linux", "webstorm", "chatgpt"],
         githubUrl: "https://github.com/nrossin/nathanrossin-dev"
     },
     {
-        title: "Untitled Project",
-        description: "A new mobile app has just begun!",
+        title: "Sale Buddy",
+        description: "A brand new multi-platform app aimed at making the running of garage sales simpler (especially for multi-family or multi-seller sales)!",
         longDescription: "This will be my first mobile-first application and is being created to not only be useful, but also as a learning project for me. Utilizing React Native for the first time, the goal is to deploy this to iOS, Android, and Web, with potential monetization in the future!",
-        flags: ["personal", "wip", "ai"],
-        images: [{url: "/images/home-pos.png"}],
-        techStack: ["react", "typescript", "react-native", "react-paper", "expo"],
+        flags: ["personal", "wip"],
+        images: [{url: "/images/untitled-project.png"}],
+        techStack: ["react", "typescript", "react-native", "react-paper", "expo", "nodejs", "express", "postgresql"],
         additionalTech: ["linux", "webstorm", "chatgpt"]
     }
 ]

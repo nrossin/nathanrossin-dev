@@ -76,7 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                             direction="row"
                             spacing={1}
                             flexWrap="wrap"
-                            sx={{mt: 1, mb: 2}}
+                            sx={{mt: 1, mb: 2, rowGap: 1}}
                         >
                             {project.flags.map((flag) => {
                                 const info = flagInfoMap[flag];
