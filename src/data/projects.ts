@@ -46,22 +46,22 @@ export const Projects = [
         `),
         flags: ["pro", "inuse"],
         images: [{
-            url: "/images/rep_assist_About.png",
+            url: "/images/projects/rep_assist/rep_assist_About.png",
             caption: "My first real project, Rep Assist was still relied upon daily by almost 100 employees as of 2023."
         }, {
-            url: "/images/rep_assist_Appetite Guide.png",
+            url: "/images/projects/rep_assist/rep_assist_Appetite Guide.png",
             caption: "Heavily database-driven, Rep Assist included an \"Appetite Guide\" which provided staff with immediate access to many details needed to assist callers on a daily basis. This is also where the staff would record their phone calls and other interactions with customers."
         }, {
-            url: "/images/rep_assist_Carrier Database.png",
+            url: "/images/projects/rep_assist/rep_assist_Carrier Database.png",
             caption: "Providing up-to-the-minute details on our carrier relationships required integrated realtime communication with our SQL Server backend."
         }, {
-            url: "/images/rep_assist_Resource Center.png",
+            url: "/images/projects/rep_assist/rep_assist_Resource Center.png",
             caption: "No knowledge management system would be complete without a centralized location for standard documents, links to company policies, and the like. Rep Assist also provided an integrated \"envelope\" system that connected with Outlook to send one or more documents directly from the application."
         }, {
-            url: "/images/rep_assist_Agency Search.png",
+            url: "/images/projects/rep_assist/rep_assist_Agency Search.png",
             caption: "As a division of Farmers Insurance, our staff needed an integrated method of loading agent data and also tracking interactions with specific agents. The \"Agency Search\" feature in Rep Assist provided this data along with many qualify-of-life features."
         }, {
-            url: "/images/rep_assist_Random Code.png",
+            url: "/images/projects/rep_assist/rep_assist_Random Code.png",
             caption: "A sampling of the Rep Assist source code, highlighting some of the Utility methods/functions created for the system. Note that this project began as a learning experience for me and I had not yet developed best practices for code organization and documentation."
         }],
         techStack: ["java", "javafx", "sqlserver"],
@@ -106,7 +106,7 @@ export const Projects = [
         `),
         flags: ["pro", "inuse"],
         images: [{
-            url: "/images/es_filing_manager.png",
+            url: "/images//projects/es_filing_manager/es_filing_manager.png",
             caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
         }],
         techStack: ["java", "javafx", "sqlserver"],
@@ -137,7 +137,7 @@ export const Projects = [
         
         `),
         flags: ["pro", "archived"],
-        images: [{url: "/images/alteryx-ace.png"},{url: "/images/alteryx-acquisitions.png"}],
+        images: [{url: "/images/projects/alteryx/alteryx-ace.png"},{url: "/images/projects/alteryx/alteryx-acquisitions.png"}],
         techStack: ["alteryx", "sqlserver"]
     },
     {
@@ -167,7 +167,7 @@ export const Projects = [
         
         `),
         flags: ["pro", "incomplete", "archived"],
-        images: [{url: "/images/slater_01.png"}],
+        images: [{url: "/images/projects/slater/slater_01.png"}],
         techStack: ["java", "javafx", "sqlserver"],
         additionalTech: ["intellij", "sqlserver"]
     },
@@ -196,16 +196,16 @@ export const Projects = [
         `),
         flags: ["pro", "inuse"],
         images: [{
-            url: "/images/tax_calculator_03.png",
+            url: "/images/projects/tax_calculator/tax_calculator_03.png",
             caption: "This React application was deployed as a native Windows application (via Electron), but received automatic updates. With an XML \"backend\" providing the state-specific tax rates and rules, employees were able to ensure compliance with state regulations."
         }, {
-            url: "/images/tax_calculator_04.png",
+            url: "/images/projects/tax_calculator/tax_calculator_04.png",
             caption: "State rules and regulations are subject to change; this interface ensured users were aware of what changed and when."
         }, {
-            url: "/images/tax_calculator_01.png",
+            url: "/images/projects/tax_calculator/tax_calculator_01.png",
             caption: "A proper API was planned for this application at some time in the future; here is a sampling of the API code that would talk to the \"backend\" (provided at this time via a bundled XML)."
         }, {
-            url: "/images/tax_calculator_02.png",
+            url: "/images/projects/tax_calculator/tax_calculator_02.png",
             caption: "This application ignited my appreciation for the MUI framework, which can be seen in use here."
         }],
         techStack: ["react", "electron", "typescript", "mui"],
@@ -228,7 +228,7 @@ export const Projects = [
         - [Wordle - NY Times](https://www.nytimes.com/games/wordle/index.html)
         `),
         images: [{
-            url: "images/workle.png",
+            url: "images/projects/workle/workle.png",
             caption: "Workle included a daily word (all players played the same word each day), statistics, and simple animations."
         }],
         techStack: ["java", "javafx", "sqlite"],
@@ -240,10 +240,10 @@ export const Projects = [
         flags: ["pro", "incomplete", "archived"],
         description: "Incomplete PowerApps application that was to serve as a organizer/manager for onboarding managers and trainers for new employees.",
         images: [{
-            url: "/images/onboarding_manager_01.png",
+            url: "/images/projects/onboarding_manager/onboarding_manager_01.png",
             caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
         }, {
-            url: "/images/onboarding_manager_02.png",
+            url: "/images/projects/onboarding_manager/onboarding_manager_02.png",
             caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
         }],
         techStack: ["powerapps"]
@@ -253,7 +253,7 @@ export const Projects = [
         flags: ["personal", "inuse"],
         description: "A simple script that extends the available video backgrounds in Microsoft Teams.",
         images: [{
-            url: "/images/tbs.png",
+            url: "/images/projects/tbs/tbs.png",
             caption: "Behind the scenes, the script allows users to specify a local folder containing their additional video backgrounds, and switch those for the defaults provided by Microsoft."
         }],
         githubUrl: "https://github.com/nrossin/teams-bg-switcher",
@@ -265,7 +265,7 @@ export const Projects = [
         description: "Secure, private, and anonymous file sharing made easy—time bombs included!",
         flags: ["personal", "wip"],
         images: [{
-            url: "/images/zipuno_01.png",
+            url: "/images/projects/zipuno/zipuno_01.png",
             caption: "First personal app to include backend coding, Zipuno.io utilizes a PostgreSQL database to facilitate file sharing."
         }],
         liveDemoUrl: "https://zipuno-frontend.onrender.com/",
@@ -277,7 +277,7 @@ export const Projects = [
         description: "A simple passion project meant to capture the nostalgic magic of my favorite BBS door game of yesteryear. Still a work in progress!",
         flags: ["personal", "wip"],
         images: [{
-            url: "/images/lord-web_01.png",
+            url: "/images/projects/lord-web/lord-web_01.png",
             caption: "Legend of the Red Dragon was a popular text-based, online role playing game that I grew up with. I am using modern web technology to bring the format back to life."
         }],
         techStack: ["react", "typescript", "mui", "nodejs", "express", "postgresql"],
@@ -287,17 +287,27 @@ export const Projects = [
         title: "Personal Portfolio",
         description: "This is what you're looking at. Where? Right here. When? Right now!",
         flags: ["personal", "pro", "inuse", "wip"],
-        images: [{url: "/images/portfolio.png"}],
+        images: [{url: "/images/projects/portfolio/portfolio.png"}],
         techStack: ["react", "typescript", "mui"],
         additionalTech: ["linux", "webstorm", "chatgpt"],
         githubUrl: "https://github.com/nrossin/nathanrossin-dev"
     },
     {
         title: "Sale Buddy",
-        description: "A brand new multi-platform app aimed at making the running of garage sales simpler (especially for multi-family or multi-seller sales)!",
-        longDescription: "This will be my first mobile-first application and is being created to not only be useful, but also as a learning project for me. Utilizing React Native for the first time, the goal is to deploy this to iOS, Android, and Web, with potential monetization in the future!",
+        description: "A brand new multi-platform app aimed at making the running of garage sales simpler (especially for multi-family or multi-seller sales)! The Android app is currently in closed testing!",
+        longDescription: "This will be my first mobile-first application and is being created to not only be useful, but also as a learning project for me.\n\nSale Buddy is a personal point-of-sale app for neighborhood garage sales, community yard sales, and group fundraisers. Designed for events with multiple sellers, it allows users to quickly enter sales, assign them to sellers, and track totals in real-time.\n\nThis full-stack application includes two-way syncing as well as offline mode.",
         flags: ["personal", "wip"],
-        images: [{url: "/images/untitled-project.png"}],
+        images: [
+            {url: "/images/projects/sale_buddy/Sale_Buddy_Splash.png"},
+            {url: "/images/projects/sale_buddy/Sale_Buddy_LoginScreen.png"},
+            {url: "/images/projects/sale_buddy/Sale_Buddy_UserDashboard.png"},
+            {url: "/images/projects/sale_buddy/Sale_Buddy_SaleDashboard.png"},
+            {url: "/images/projects/sale_buddy/Sale_Buddy_NewTransaction.png"},
+            {url: "/images/projects/sale_buddy/Sale_Buddy_ChangeDue.png"},
+            {url: "/images/projects/sale_buddy/Sale_Buddy_CashoutSeller.png"},
+            {url: "/images/projects/sale_buddy/Sale_Buddy_EditSale.png"},
+            {url: "/images/projects/sale_buddy/Sale_Buddy_GlobalSettings.png"}
+        ],
         techStack: ["react", "typescript", "react-native", "react-paper", "expo", "nodejs", "express", "postgresql"],
         additionalTech: ["linux", "webstorm", "chatgpt"]
     }
