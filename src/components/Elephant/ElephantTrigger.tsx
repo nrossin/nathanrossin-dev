@@ -33,7 +33,7 @@ const ElephantTrigger: React.FC = () => {
                         position: 'absolute',
                         top: 78,
                         right: 24,
-                        width: 24,
+                        width: 48,
                         height: 'auto',
                         cursor: 'pointer',
                         opacity: '0.25', // This is a sneaky elephant
