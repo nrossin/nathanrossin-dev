@@ -1,5 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import HomeIcon from '@mui/icons-material/Home';
 import {
     Box,
     Button,
@@ -113,7 +114,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
 
 
                 {/*Action Buttons - if a URL is present for this project */}
-                {(project.githubUrl || project.liveDemoUrl) && (
+                {(project.githubUrl || project.liveDemoUrl || project.homepage) && (
                     <>
                         <Divider sx={{mb: 2, mt: 1}}/>
                         <Box sx={{
@@ -139,6 +140,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                                         onClick={(e) => e.stopPropagation()} // Prevent card click opening dialog
                                 >
                                     Live
+                                </Button>
+                            )}
+                            {project.homepage && (
+                                <Button size="small"
+                                        startIcon={<HomeIcon />}
+                                        href={project.homepage}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()} // Prevent card click opening dialog
+                                >
+                                    Homepage
                                 </Button>
                             )}
                         </Box>

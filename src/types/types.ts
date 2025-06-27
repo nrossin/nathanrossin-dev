@@ -28,6 +28,7 @@ export interface Project {
     techStack: string[];
     liveDemoUrl?: string;
     githubUrl?: string;
+    homepage?: string;
     additionalTech?: string[];
     longDescription?: string;
 }

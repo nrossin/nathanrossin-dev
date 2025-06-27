@@ -309,6 +309,7 @@ export const Projects = [
             {url: "/images/projects/sale_buddy/Sale_Buddy_GlobalSettings.png"}
         ],
         techStack: ["react", "typescript", "react-native", "react-paper", "expo", "nodejs", "express", "postgresql"],
+        homepage: "https://salebuddy.app",
         additionalTech: ["linux", "webstorm", "chatgpt"]
     }
 ]
