@@ -32,7 +32,9 @@ const SectionBox = ({id, title, subtitle, children}: SectionBoxProps) => {
             <Typography variant="h2" fontWeight="bold">{title}</Typography>
             <Typography variant="h5">{subtitle}</Typography>
 
-            {children}
+            <Box sx={{maxWidth: 1200}}>
+                {children}
+            </Box>
         </Box>
     );
 };
