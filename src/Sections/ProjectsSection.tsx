@@ -31,11 +31,8 @@ const ProjectsSection: React.FC = () => {
         <SectionBox id="projects"
                     title="Solo Projects"
         >
-            <Typography variant="h6" sx={{m: 4}}>
-                The applications listed here are the professional and personal projects on which I was the sole
-                developer.
-                They are listed (roughly) in the order in which they were created, though several of them are still in
-                active use today.
+            <Typography variant="h6" sx={{m: 4, fontStyle: 'italic', textAlign: 'center'}}>
+                Unless otherwise noted, all projects listed below were conceived, designed, and built independently.
             </Typography>
 
             {/*Tech Filter Bar*/}
