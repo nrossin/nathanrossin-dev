@@ -1,10 +1,12 @@
-import { Avatar, Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Avatar, Box, IconButton, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
-import techItemMapRaw from '../../../data/techItemMap.json';
-import { TechItemMap } from '../../../types/types.ts';
-import ElephantTrigger from '../../Elephant/ElephantTrigger'
+import techItemMapRaw from '../../data/techItemMap.json';
+import { TechItemMap } from '../../types/types.ts';
+import ElephantTrigger from '../../components/Elephant/ElephantTrigger.tsx'
 import SectionBox from '../SectionBox.tsx';
 import SkillsChart from './SkillsChart.tsx';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const HomeSection: React.FC = () => {
 
@@ -20,23 +22,40 @@ const HomeSection: React.FC = () => {
                     subtitle="Full-Stack Developer & Software Engineer"
         >
             <ElephantTrigger />
+
             <Box
                 display="flex"
                 gap={4}
-                alignItems="center"
+                alignItems="flex-start"
                 justifyContent="center"
                 flexWrap="wrap"
                 sx={{mt: 4}}
             >
-                <Avatar
-                    alt="Nathan Rossin"
-                    src="../images/headshot.jpg"
-                    sx={{
-                        width: 200,
-                        height: 200,
-                    }}
-                />
 
+                {/* Avatar + Icons Column */}
+                <Box display="flex" flexDirection="column" alignItems="center">
+                    <Avatar
+                        alt="Nathan Rossin"
+                        src="../images/headshot.jpg"
+                        sx={{width: 200, height: 200}}
+                    />
+
+                    <Box display="flex" justifyContent="center" gap={1} mt={1}>
+                        <Link href="https://github.com/nrossin" target="_blank" rel="noopener" underline="none">
+                            <IconButton color="primary" aria-label="GitHub Profile">
+                                <GitHubIcon fontSize="large" />
+                            </IconButton>
+                        </Link>
+                        <Link href="https://www.linkedin.com/in/nathan-rossin" target="_blank" rel="noopener"
+                              underline="none">
+                            <IconButton color="primary" aria-label="LinkedIn Profile">
+                                <LinkedInIcon fontSize="large" />
+                            </IconButton>
+                        </Link>
+                    </Box>
+                </Box>
+
+                {/*Welcome text column*/}
                 <Typography variant="body1" sx={{maxWidth: 600}}>
                     Welcome! I am a seasoned full-stack developer with 10 years’ experience building web and desktop
                     applications built in Java, JavaFX, React, and PHP.

@@ -1,8 +1,8 @@
 import { Box, Fade, Grid, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { Projects as projects } from "../../data/projects.ts";
-import ProjectCard from '../Projects/ProjectCard.tsx';
-import TechFilterBar from '../Projects/TechFilterBar.tsx';
+import { Projects as projects } from "../data/projects.ts";
+import ProjectCard from '../components/Projects/ProjectCard.tsx';
+import TechFilterBar from '../components/Projects/TechFilterBar.tsx';
 import SectionBox from './SectionBox.tsx';
 
 const ProjectsSection: React.FC = () => {

@@ -10,7 +10,7 @@ import {
 } from '@mui/lab';
 import { Box, List, ListItem, ListItemIcon, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
-import { workHistory } from '../../data/workHistory.ts';
+import { workHistory } from '../data/workHistory.ts';
 import SectionBox from './SectionBox.tsx';
 
 const HistorySection: React.FC = () => {

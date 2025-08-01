@@ -1,8 +1,8 @@
 import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Grid, Stack, Typography, useTheme } from '@mui/material';
 import React from 'react';
-import { TechInfo, TechItemMap } from '../../../types/types.ts';
-import TechChip from '../../Common/TechChip.tsx';
+import { TechInfo, TechItemMap } from '../../types/types.ts';
+import TechChip from '../../components/Common/TechChip.tsx';
 
 interface SkillsChartProps {
     techItemMap: TechItemMap,
