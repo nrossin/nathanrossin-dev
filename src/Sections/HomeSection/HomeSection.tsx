@@ -61,8 +61,10 @@ const HomeSection: React.FC = () => {
                     applications built in Java, JavaFX, React, and PHP.
                     <br /><br />
                     I am skilled at translating business needs into clean, maintainable code and communicating technical
-                    solutions back to non-technical stakeholders and business owners. Passionate about root-cause
-                    analysis, driving agile teams forward, and delivering valuable ROI.
+                    solutions back to non-technical stakeholders and business owners.
+                    <br /><br />
+                    I am an advocate for Linux operating systems and open-source software — recently building my own
+                    self-hosted servers utilizing Ubuntu Server, Docker, Cloudflare, and more.
                     <br /><br />
                     Please feel free to check out my Projects below and let me know if you have any questions or
                     comments!
