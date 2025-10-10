@@ -12,7 +12,7 @@ export const workHistory: WorkExperience[] = [
     {
         company: 'Michigan State University Federal Credit Union',
         department: 'Enterprise Applications',
-        title: 'Software Developer',
+        title: 'Software Engineer',
         startDate: 'July 2023',
         endDate: 'Present',
         duration: '',
