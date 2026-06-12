@@ -286,7 +286,7 @@ export const Projects = [
     {
         title: "Personal Portfolio",
         description: "This is what you're looking at. Where? Right here. When? Right now!",
-        flags: ["personal", "pro", "inuse", "wip"],
+        flags: ["personal", "pro", "inuse"],
         images: [{url: "/images/projects/portfolio/portfolio.png"}],
         techStack: ["react", "typescript", "mui"],
         additionalTech: ["linux", "webstorm", "chatgpt"],
