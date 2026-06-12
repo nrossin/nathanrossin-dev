@@ -181,6 +181,13 @@
     "description": "",
     "category": "Operating Systems"
   },
+  "bash": {
+    "label": "Bash Shell Scripting",
+    "icon": "hugeicons:bash",
+    "url": "https://www.gnu.org/software/bash/",
+    "description": "",
+    "category": "Other"
+  },
   "aix": {
     "label": "IBM AIX",
     "icon": "logos:aix",
