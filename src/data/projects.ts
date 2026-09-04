@@ -1,301 +1,201 @@
-import { dedent } from 'ts-dedent'; // Just because I cannot stand messy code files :)
+import {dedent} from 'ts-dedent'; // Just because I cannot stand messy code files :)
 
 export const Projects = [
     {
         title: "Rep Assist",
-        description: "Complete knowledge management and CRM application suite. What began as a hands-on training project quickly became an indispensable set of tools relied upon by an entire company.",
+        description: "Knowledge-management and workflow suite that grew from a small documentation tool into a " +
+            "collection of internal applications used daily by more than 50 employees.",
         longDescription: dedent(`
         # Overview
 
-        _An expansive suite of applications designed to replace multiple Excel spreadsheets, documentation, etc._
+        _A knowledge-management and workflow suite built around the day-to-day needs of customer-service and insurance 
+        operations._
         
         ---
         
         # Background
         
-        Rep Assist was originally bourne out of a desire to stop repeatedly typing the same comments over and over again
-        when customers would call in to service their insurance policies ("add driver," "make payment," etc.). The first
-        version of this app was simply known as "Comment Master" and helped to automatically generate standardized
-        comments to be copy/pasted into our CMS system.
+        Rep Assist began while I was working directly in customer service operations. I found myself repeatedly entering
+        the same types of customer interaction notes, so I created a small Java/JavaFX application to generate
+        standardized documentation more quickly and consistently.
         
-        After changing departments, the scope grew quite rapidly. Our new department was dependent on multiple Excel
-        spreadsheets and other loose documents; there was no central location for the department's knowledge. After
-        spending time working the phones in that department, I began adapting and expanding rep assist to meet the unique
-        needs of that team.
+        After moving into another department, I encountered a broader problem: important operational knowledge was 
+        spread across Excel spreadsheets, documents, and other disconnected sources. Because I had firsthand experience
+        with the work, I began expanding Rep Assist to centralize that information and simplify common workflows.
         
-        Over the next few years, rep assist became a de-facto customer relationship manager and knowledge management suite
-        of applications.
+        Over time, Rep Assist grew into a broader knowledge-management and workflow suite used daily by more than 50 
+        employees. Its features evolved continuously through direct user feedback, observation of existing processes, 
+        and opportunities I identified while working closely with the people using it.
         
         ---
         
-        # Challenges & Solutions
+        # Technical Evolution
         
-        **Challenge:** At the beginning, I did not know how to create applications at all.  
-        **Solution:** After researching languages (in 2015), I decided to learn Java and JavaFX, using this particular project as my learning goal.
-        
-        **Challenge:** As the user base grew, the application became less stable  
-        **Solution:** Moved "backend" from a shared network drive to SQL Server database
+        The project also grew alongside my own development experience. The earliest version was created while I was 
+        learning Java and JavaFX. As its user base and data needs expanded, I moved application data away from shared 
+        files and into SQL Server, allowing the suite to support increasingly complex and data-driven functionality.
         
         ---
         
         # Links
         
-        - Rep Assist was developed as a proprietary tool for a former employer; public demo/repository is unavailable.
-
-        
-        `),
+        - Rep Assist was developed as a proprietary tool for a former employer; a public demo or repository is 
+        unavailable.`
+        ),
         flags: ["pro", "inuse"],
         images: [{
             url: "/images/projects/rep_assist/rep_assist_About.png",
-            caption: "My first real project, Rep Assist was still relied upon daily by almost 100 employees as of 2023."
+            caption: "Rep Assist grew from my first substantial software project into a knowledge-management and " +
+                "workflow suite used daily by more than 50 employees."
         }, {
             url: "/images/projects/rep_assist/rep_assist_Appetite Guide.png",
-            caption: "Heavily database-driven, Rep Assist included an \"Appetite Guide\" which provided staff with immediate access to many details needed to assist callers on a daily basis. This is also where the staff would record their phone calls and other interactions with customers."
+            caption: "Heavily database-driven, Rep Assist included an \"Appetite Guide\" which provided staff with " +
+                "immediate access to many details needed to assist callers on a daily basis. This is also where the " +
+                "staff would record their phone calls and other interactions with customers."
         }, {
             url: "/images/projects/rep_assist/rep_assist_Carrier Database.png",
-            caption: "Providing up-to-the-minute details on our carrier relationships required integrated realtime communication with our SQL Server backend."
+            caption: "Providing up-to-the-minute details on our carrier relationships required integrated real-time " +
+                "communication with our SQL Server backend."
         }, {
             url: "/images/projects/rep_assist/rep_assist_Resource Center.png",
-            caption: "No knowledge management system would be complete without a centralized location for standard documents, links to company policies, and the like. Rep Assist also provided an integrated \"envelope\" system that connected with Outlook to send one or more documents directly from the application."
+            caption: "No knowledge management system would be complete without a centralized location for standard " +
+                "documents, links to company policies, and the like. Rep Assist also provided an integrated \"envelope\" " +
+                "system that connected with Outlook to send one or more documents directly from the application."
         }, {
             url: "/images/projects/rep_assist/rep_assist_Agency Search.png",
-            caption: "As a division of Farmers Insurance, our staff needed an integrated method of loading agent data and also tracking interactions with specific agents. The \"Agency Search\" feature in Rep Assist provided this data along with many qualify-of-life features."
+            caption: "As a division of Farmers Insurance, our staff needed an integrated method of loading agent data " +
+                "and also tracking interactions with specific agents. The \"Agency Search\" feature in Rep Assist " +
+                "provided this data along with many quality-of-life features."
         }, {
-            url: "/images/projects/rep_assist/rep_assist_Random Code.png",
-            caption: "A sampling of the Rep Assist source code, highlighting some of the Utility methods/functions created for the system. Note that this project began as a learning experience for me and I had not yet developed best practices for code organization and documentation."
+            url: "/images/projects/rerealtimep_assist/rep_assist_Random Code.png",
+            caption: "A sampling of the Rep Assist source code, highlighting some of the utility methods and functions " +
+                "created for the system."
         }],
         techStack: ["java", "javafx", "sqlserver"],
-        additionalTech: [
-            "intellij", "rally", "github"
-        ]
-    },
-    {
-        title: "E&S Filing Manager",
-        description: "The Excess & Surplus Lines industry's first and only state filings manager! This application helped ensure compliance with state filing regulations, avoiding penalties and fees.",
-        longDescription: dedent(`
-        # Overview
-
-        _A visual database and reporting tool intended to assist the insurance agency with managing the status of 
-        policy filings with each state._
-        
-        ---
-        
-        # Background
-        
-        For many years, our team had used manually-updated Excel spreadsheets to track the state filing statuses of thousands
-        of insurance policies. With errors leading to sometimes massive penalties from state regulatory agencies, there
-        was a genuine need to move to a more modern solution.
-        
-        The industry itself does not already have such a solution available, so I set about creating the first of its kind.
-        
-        The E&S Filing Manager was created as an add-on to Rep Assist that allowed our teams to accurately track, plan, and
-        report on the current filing status for these policies.
-        
-        ---
-        
-        # Impact
-        
-        - 💲 Within the first year of its operation, the agency had saved over $10,000 in state fines and penalties.
-        - ⌛ No more late filings!
-        
-        ---
-        
-        # Links
-        
-        - The E&S Filing Manager was developed as a proprietary tool for a former employer; public demo/repository is unavailable.
-        `),
-        flags: ["pro", "inuse"],
-        images: [{
-            url: "/images//projects/es_filing_manager/es_filing_manager.png",
-            caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
-        }],
-        techStack: ["java", "javafx", "sqlserver"],
-        additionalTech: [
-            "intellij", "rally", "github"
-        ]
-    },
-    {
-        title: "Alteryx Workflows",
-        description: "Detailed ETL workflows built to ingest, format, and output large amounts of data.",
-        longDescription: dedent(`
-        # Overview
-        
-        _Our department received and provided numerous reports during our daily business—I used Alteryx to make sense of it all._
-        
-        ---
-        
-        # Background
-        
-        My philosophy while creating these workflows was that they must be human readable and understandable by not only myself.
-        As such, I spent an extensive amount of time ensuring each step was properly documented and organized in an intuitive manner.
-        
-        ---
-        
-        # Links
-        
-        - These workflows were developed as proprietary tools for a former employer; public demo/repository is unavailable.
-        
-        `),
-        flags: ["pro", "archived"],
-        images: [{url: "/images/projects/alteryx/alteryx-ace.png"},{url: "/images/projects/alteryx/alteryx-acquisitions.png"}],
-        techStack: ["alteryx", "sqlserver"]
-    },
-    {
-        title: "Slater - The Acquisitions Manager",
-        description: "Data-heavy application designed to assist with (and track) the transferring an agent's book of business to another agency.",
-        longDescription: dedent(`
-        # Overview
-        
-        _While never completed, this app was meant to assist our staff in processing book-of-business transfers from
-        one agent to another (common when agents leave the agency, for example)._
-        
-        ---
-        
-        # Background
-        
-        When agents leave the agency or a policyholder simply requests a different agent, a transfer needs to take
-        place. There are often several steps involved in order to smoothly transition from one agent to another.
-        
-        Slater - The Acquisition Center (so named in jest as it was once simply called A.C.; IYKYK) was built to 
-        keep track of these transfers and ensure the workflow handled smoothly.
-        
-        ---
-        
-        # Links
-        
-        - Slater was developed as a proprietary tool for a former employer; public demo/repository is unavailable.
-        
-        `),
-        flags: ["pro", "incomplete", "archived"],
-        images: [{url: "/images/projects/slater/slater_01.png"}],
-        techStack: ["java", "javafx", "sqlserver"],
-        additionalTech: ["intellij", "sqlserver"]
+        additionalTech: ["github"]
     },
     {
         title: "E&S Tax Calculator",
-        description: "My first real web-based application, this simple tool assisted underwriters with ensuring the proper tax was being charged on new insurance policies.",
+        description: "React/Electron desktop application built to automate state-specific Excess & Surplus Lines tax " +
+            "and fee calculations for underwriters.",
         longDescription: dedent(`
         # Overview
-
-        _The E&S Tax Calculator was designed to ensure our underwriters included the correct amount of state taxes
-        when writing a policy._
+        
+        _A React/Electron desktop application built to automate state-specific Excess & Surplus Lines policy tax and 
+        fee calculations._
         
         ---
         
         # Background
         
-        This was my first foray into modern web development and I chose to focus on learning React and MUI for the task.
-        Interestingly, this app was never actually deployed to a web server, but instead uses Electron.js to build a
-        native Windows application in which the web app would run.
+        Underwriters needed to apply different taxes, fees, and calculation rules depending on the state in which a 
+        policy was written.
+        
+        I independently designed and built the E&S Tax Calculator to turn those state-specific requirements into a 
+        guided calculation workflow.
+        
+        Business rules provided by compliance specialists were represented in an XML-driven calculation engine, allowing 
+        the application to apply the appropriate calculations while keeping the underlying rules maintainable as 
+        requirements changed.
+        
+        Although built with web technologies including React and TypeScript, the application was packaged with Electron 
+        and deployed as a Windows desktop application.
+        
+        Throughout development, I worked directly with underwriters using screenshots, demonstrations, and feedback to 
+        validate the workflow and iteratively improve the application.
         
         ---
         
         # Links
         
-        - The E&S Tax Calculator was developed as a proprietary tool for a former employer; public demo/repository is unavailable.
+        - The E&S Tax Calculator was developed as a proprietary tool for a former employer; a public demo or repository is unavailable.
         `),
         flags: ["pro", "inuse"],
         images: [{
             url: "/images/projects/tax_calculator/tax_calculator_03.png",
-            caption: "This React application was deployed as a native Windows application (via Electron), but received automatic updates. With an XML \"backend\" providing the state-specific tax rates and rules, employees were able to ensure compliance with state regulations."
+            caption: "This React application was deployed as a native Windows application (via Electron), but received " +
+                "automatic updates. With an XML \"backend\" providing the state-specific tax rates and rules, employees " +
+                "were able to ensure compliance with state regulations."
         }, {
             url: "/images/projects/tax_calculator/tax_calculator_04.png",
-            caption: "State rules and regulations are subject to change; this interface ensured users were aware of what changed and when."
+            caption: "State rules and regulations are subject to change; this interface ensured users were aware of what " +
+                "changed and when."
         }, {
             url: "/images/projects/tax_calculator/tax_calculator_01.png",
-            caption: "A proper API was planned for this application at some time in the future; here is a sampling of the API code that would talk to the \"backend\" (provided at this time via a bundled XML)."
+            caption: "A sampling of the application's data-access code used to work with the XML-based rules and " +
+                "calculation data."
         }, {
             url: "/images/projects/tax_calculator/tax_calculator_02.png",
             caption: "This application ignited my appreciation for the MUI framework, which can be seen in use here."
         }],
         techStack: ["react", "electron", "typescript", "mui"],
-        additionalTech: ["linux", "webstorm", "github"]
+        additionalTech: ["linux", "github"]
     },
     {
-        title: "Workle",
-        flags: ["personal", "archived"],
-        description: "Simple, JavaFX clone of the popular word game Wordle. Workle runs locally on Windows machines.",
+        title: "E&S Filing Manager",
+        description: "State-filings management application built to centralize filing requirements, track progress, and " +
+            "support compliance workflows across all 50 states.",
         longDescription: dedent(`
         # Overview
-
-        _Workle was created as a fun side project for my mother, a fan of the original Wordle game. It was then also
-        pitched to my employer at Kraft Lake/Farmers, where it was allowed as a once-a-day game for the department!_
+        
+        _A centralized application for tracking Excess & Surplus Lines filing requirements and progress across 
+        state-specific workflows._
+        
+        ---
+        
+        # Background
+        
+        The team had historically relied on manually maintained Excel spreadsheets to track filing requirements and the 
+        status of insurance policies across different states.
+        
+        Because filing rules and workflows varied by state, the process required careful tracking and created 
+        opportunities for missed steps and inconsistent information.
+        
+        I designed and built the E&S Filing Manager as an extension of Rep Assist, providing a centralized location for 
+        tracking filing requirements, workflow status, and related information across all 50 states.
+        
+        The application replaced a fragmented manual process with a structured, queryable workflow that made it easier 
+        for users to understand what needed to be completed and where each filing stood.
         
         ---
         
         # Links
         
-        - [Wordle - NY Times](https://www.nytimes.com/games/wordle/index.html)
+        - The E&S Filing Manager was developed as a proprietary tool for a former employer; a public demo or repository 
+        is unavailable.
         `),
+        flags: ["pro", "inuse"],
         images: [{
-            url: "images/projects/workle/workle.png",
-            caption: "Workle included a daily word (all players played the same word each day), statistics, and simple animations."
+            url: "/images//projects/es_filing_manager/es_filing_manager.png",
+            caption: "The filing-management interface provided centralized tracking of policy filing requirements and " +
+                "status across state-specific workflows."
         }],
-        techStack: ["java", "javafx", "sqlite"],
-        additionalTech: ["intellij", "github"],
-        githubUrl: "https://github.com/nrossin/workle"
-    },
-    {
-        title: "Onboarding Manager",
-        flags: ["pro", "incomplete", "archived"],
-        description: "Incomplete PowerApps application that was to serve as a organizer/manager for onboarding managers and trainers for new employees.",
-        images: [{
-            url: "/images/projects/onboarding_manager/onboarding_manager_01.png",
-            caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
-        }, {
-            url: "/images/projects/onboarding_manager/onboarding_manager_02.png",
-            caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
-        }],
-        techStack: ["powerapps"]
-    },
-    {
-        title: "Teams Background Switcher",
-        flags: ["personal", "inuse"],
-        description: "A simple script that extends the available video backgrounds in Microsoft Teams.",
-        images: [{
-            url: "/images/projects/tbs/tbs.png",
-            caption: "Behind the scenes, the script allows users to specify a local folder containing their additional video backgrounds, and switch those for the defaults provided by Microsoft."
-        }],
-        githubUrl: "https://github.com/nrossin/teams-bg-switcher",
-        techStack: ["python"],
-        additionalTech: ["pycharm"],
-    },
-    {
-        title: "Zipuno.io",
-        description: "Secure, private, and anonymous file sharing made easy—time bombs included!",
-        flags: ["personal", "wip"],
-        images: [{
-            url: "/images/projects/zipuno/zipuno_01.png",
-            caption: "First personal app to include backend coding, Zipuno.io utilizes a PostgreSQL database to facilitate file sharing."
-        }],
-        liveDemoUrl: "https://zipuno-frontend.onrender.com/",
-        techStack: ["react", "typescript", "nodejs", "express", "postgresql"],
-        additionalTech: ["linux", "webstorm", "chatgpt"],
-    },
-    {
-        title: "Legend of the Red Dragon - React Clone",
-        description: "A simple passion project meant to capture the nostalgic magic of my favorite BBS door game of yesteryear. Still a work in progress!",
-        flags: ["personal", "wip"],
-        images: [{
-            url: "/images/projects/lord-web/lord-web_01.png",
-            caption: "Legend of the Red Dragon was a popular text-based, online role playing game that I grew up with. I am using modern web technology to bring the format back to life."
-        }],
-        techStack: ["react", "typescript", "mui", "nodejs", "express", "postgresql"],
-        additionalTech: ["linux", "webstorm", "chatgpt"],
-    },
-    {
-        title: "Personal Portfolio",
-        description: "This is what you're looking at. Where? Right here. When? Right now!",
-        flags: ["personal", "pro", "inuse"],
-        images: [{url: "/images/projects/portfolio/portfolio.png"}],
-        techStack: ["react", "typescript", "mui"],
-        additionalTech: ["linux", "webstorm", "chatgpt"],
-        githubUrl: "https://github.com/nrossin/nathanrossin-dev"
+        techStack: ["java", "javafx", "sqlserver"],
+        additionalTech: ["github"]
     },
     {
         title: "Sale Buddy",
-        description: "A brand new multi-platform app aimed at making the running of garage sales simpler (especially for multi-family or multi-seller sales)! The Android app is currently in closed testing!",
-        longDescription: "This will be my first mobile-first application and is being created to not only be useful, but also as a learning project for me.\n\nSale Buddy is a personal point-of-sale app for neighborhood garage sales, community yard sales, and group fundraisers. Designed for events with multiple sellers, it allows users to quickly enter sales, assign them to sellers, and track totals in real-time.\n\nThis full-stack application includes two-way syncing as well as offline mode.",
+        description: "Personal web application for managing checkout at multi-seller garage and yard sales, tracking " +
+            "purchased items, seller attribution, quantities, and transaction totals.",
+        longDescription: dedent(`
+        # Overview
+        
+        _A responsive application designed to simplify checkout and seller tracking at multi-seller garage and yard sales._
+        
+        # Background
+        
+        Sale Buddy was originally developed as a functional React Native mobile application. I am now reimplementing it as a responsive React and TypeScript web application designed to work across both mobile and desktop devices.
+        
+        The core workflow is intentionally simple: create or open a sale, start a customer transaction, enter purchased items and their associated sellers, and calculate both the customer's total and the amount attributable to each seller.
+        
+        The project is serving as an ongoing opportunity to deepen my experience with modern React development, TypeScript, responsive UI design, application state, and full-stack application architecture.
+        
+        ---
+        
+        # Screenshots
+        
+        The screenshots shown here are from the earlier React Native mobile implementation. They represent the application's established workflows and functionality rather than the current web interface.
+        `),
         flags: ["personal", "wip"],
         images: [
             {url: "/images/projects/sale_buddy/Sale_Buddy_Splash.png"},
@@ -310,6 +210,164 @@ export const Projects = [
         ],
         techStack: ["react", "typescript", "react-native", "react-paper", "expo", "nodejs", "express", "postgresql"],
         homepage: "https://salebuddy.app",
-        additionalTech: ["linux", "webstorm", "chatgpt"]
-    }
+        additionalTech: ["linux"]
+    },
+    {
+        title: "Alteryx Workflows",
+        description: "ETL workflows built with Alteryx and SQL Server to consolidate fragmented insurance data into structured, queryable datasets.",
+        longDescription: dedent(`
+        # Overview
+
+        _ETL workflows designed to consolidate, transform, and standardize data used in operational reporting and 
+        internal applications._
+        
+        ---
+        
+        # Background
+        
+        Our department received data from multiple sources and formats, creating a need to normalize and combine that 
+        information before it could be reliably queried or used in downstream processes.
+        
+        I built Alteryx workflows backed by SQL Server to ingest, transform, and consolidate these fragmented datasets.
+        
+        I placed particular emphasis on making the workflows understandable and maintainable by others, organizing and 
+        documenting individual processing steps so that the logic could be followed without relying solely on the 
+        original developer.
+        
+        ---
+        
+        # Links
+        
+        - These workflows were developed as proprietary tools for a former employer; a public demo or repository is 
+        unavailable.
+        `),
+        flags: ["pro", "archived"],
+        images: [{url: "/images/projects/alteryx/alteryx-ace.png"}, {url: "/images/projects/alteryx/alteryx-acquisitions.png"}],
+        techStack: ["alteryx", "sqlserver"]
+    },
+    {
+        title: "Slater - The Acquisitions Manager",
+        description: "Prototype workflow application designed to help staff coordinate and track agent book-of-business " +
+            "transfers.",
+        longDescription: dedent(`
+        # Overview
+        
+        _An unfinished workflow application designed to organize the multi-step process of transferring an insurance 
+        agent's book of business._
+        
+        ---
+        
+        # Background
+        
+        When an agent left the agency or a policyholder needed to move to another agent, several coordinated steps were 
+        required to complete the transfer.
+        
+        I began developing Slater as a centralized application for tracking those transfers, their required steps, and 
+        their current status.
+        
+        Although the project was not completed prior to my leaving the organization, it represents another example of 
+        applying software to a complex operational workflow that had previously been managed through more manual 
+        processes.
+        
+        ---
+        
+        # Links
+        
+        - Slater was developed as a proprietary tool for a former employer; a public demo or repository is unavailable.
+        `),
+        flags: ["pro", "incomplete", "archived"],
+        images: [{url: "/images/projects/slater/slater_01.png"}],
+        techStack: ["java", "javafx", "sqlserver"],
+        additionalTech: ["sqlserver"]
+    },
+    {
+        title: "Workle",
+        flags: ["personal", "archived"],
+        description: "JavaFX word game inspired by Wordle, originally created as a personal side project and later made " +
+            "available internally for coworkers to play.",
+        longDescription: dedent(`
+        # Overview
+
+        _Workle was created as a fun side project for my mother, a fan of the original Wordle game. It was then also
+        pitched to my employer at Kraft Lake/Farmers, where it was allowed as a once-a-day game for the department!_
+        
+        ---
+        
+        # Links
+        
+        - [Wordle - NY Times](https://www.nytimes.com/games/wordle/index.html)
+        `),
+        images: [{
+            url: "images/projects/workle/workle.png",
+            caption: "Workle included a daily word (all players played the same word each day), statistics, and simple " +
+                "animations."
+        }],
+        techStack: ["java", "javafx", "sqlite"],
+        additionalTech: ["github"],
+        githubUrl: "https://github.com/nrossin/workle"
+    },
+    // {
+    //     title: "Onboarding Manager",
+    //     flags: ["pro", "incomplete", "archived"],
+    //     description: "Incomplete PowerApps application that was to serve as a organizer/manager for onboarding managers and trainers for new employees.",
+    //     images: [{
+    //         url: "/images/projects/onboarding_manager/onboarding_manager_01.png",
+    //         caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
+    //     }, {
+    //         url: "/images/projects/onboarding_manager/onboarding_manager_02.png",
+    //         caption: "A busy interface, but provided crucial tracking services to ensure policy filings were completed in compliance with state laws."
+    //     }],
+    //     techStack: ["powerapps"]
+    // },
+    {
+        title: "Teams Background Switcher",
+        flags: ["personal", "inuse"],
+        description: "Small Python utility created to make it easier to manage and switch custom video backgrounds in " +
+            "Microsoft Teams.",
+        images: [{
+            url: "/images/projects/tbs/tbs.png",
+            caption: "Behind the scenes, the script allows users to specify a local folder containing their additional " +
+                "video backgrounds, and switch those for the defaults provided by Microsoft."
+        }],
+        githubUrl: "https://github.com/nrossin/teams-bg-switcher",
+        techStack: ["python"],
+        additionalTech: [],
+    },
+    {
+        title: "Zipuno.io",
+        description: "Full-stack file-sharing application built with React, TypeScript, Node.js, Express, and " +
+            "PostgreSQL, including time-limited file availability.",
+        flags: ["personal", "wip"],
+        images: [{
+            url: "/images/projects/zipuno/zipuno_01.png",
+            caption: "Zipuno.io uses a PostgreSQL database and Node.js/Express backend to support its file-sharing " +
+                "workflow."
+        }],
+        liveDemoUrl: "https://zipuno-frontend.onrender.com/",
+        techStack: ["react", "typescript", "nodejs", "express", "postgresql"],
+        additionalTech: ["linux"],
+    },
+    {
+        title: "Legend of the Red Dragon - React Clone",
+        description: "React-based reimagining of the classic BBS door game Legend of the Red Dragon, built as an ongoing " +
+            "full-stack passion project.",
+        flags: ["personal", "wip"],
+        images: [{
+            url: "/images/projects/lord-web/lord-web_01.png",
+            caption: "Legend of the Red Dragon was a popular text-based, online role playing game that I grew up with. " +
+                "I am using modern web technology to bring the format back to life."
+        }],
+        techStack: ["react", "typescript", "mui", "nodejs", "express", "postgresql"],
+        additionalTech: ["linux"],
+    },
+    {
+        title: "Personal Portfolio",
+        description: "This is what you're looking at. Where? Right here. When? Right now!",
+        flags: ["personal", "pro", "inuse"],
+        images: [{url: "/images/projects/portfolio/portfolio.png"}],
+        techStack: ["react", "typescript", "mui"],
+        additionalTech: ["linux"],
+        githubUrl: "https://github.com/nrossin/nathanrossin-dev"
+    },
+
 ]

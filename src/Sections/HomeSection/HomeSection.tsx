@@ -57,19 +57,19 @@ const HomeSection: React.FC = () => {
 
                 {/*Welcome text column*/}
                 <Typography variant="body1" sx={{maxWidth: 600}}>
-                    <p>I am a software engineer with 10+ years of experience building web and desktop applications that
-                    solve real business problems.</p>
-
-                    <p>Much of my work has involved partnering directly with users, stakeholders, and technical teams to
+                    I am a software engineer with 10+ years of experience building web and desktop applications that
+                    solve real business problems.
+                    <br /><br />
+                    Much of my work has involved partnering directly with users, stakeholders, and technical teams to
                     understand how a process works, identify opportunities for improvement, and turn those needs into
-                    practical software solutions.</p>
-
-                    <p>My experience includes Java, React, TypeScript, JavaScript, Node.js, PHP, SQL, Linux, and Docker,
+                    practical software solutions.
+                    <br /><br />
+                    My experience includes Java, React, TypeScript, JavaScript, Node.js, PHP, SQL, Linux, and Docker,
                     with a particular focus on full-stack application development, internal business applications, and
-                    business process automation.</p>
-
-                    <p>I enjoy taking software from an initial idea through design, development, deployment, and continued
-                    iteration, especially when I can work closely with the people who will actually use it.</p>
+                    business process automation.
+                    <br /><br />
+                    I enjoy taking software from an initial idea through design, development, deployment, and continued
+                    iteration, especially when I can work closely with the people who will actually use it.
 
                 </Typography>
             </Box>
