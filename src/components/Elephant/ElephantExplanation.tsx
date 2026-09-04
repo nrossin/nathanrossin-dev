@@ -28,23 +28,24 @@ const ElephantExplanation: React.FC<ElephantExplanationProps> = ({ onClose }) =>
             </Typography>
 
             <Typography variant="body1" sx={{mt: 2}}>
-                So... this site may not be the most dazzling piece of web design you’ve ever seen.
-                I’m okay with that. I’m a developer, not a designer — and this portfolio is here to
-                highlight clean architecture, real functionality, and the kind of code that holds up under pressure.
+                This portfolio was built by a software engineer, not a professional designer. My focus was on creating
+                something functional, maintainable, responsive, and representative of how I approach building software.
             </Typography>
 
             <Typography variant="body1" sx={{mt: 2}}>
-                And since we’re being honest: yes, I’ve collaborated with AI — specifically ChatGPT —
-                while building this site. I’ve used it as a thinking partner, a code assistant, and an occasional sanity check.
+                There is another elephant in the room, too: I use AI tools, including ChatGPT, as part of my development
+                workflow. I use them to explore ideas, challenge assumptions, troubleshoot problems, and accelerate work
+                where they are useful.
             </Typography>
 
             <Typography variant="body1" sx={{mt: 2}}>
-                But here’s the key: I don’t just copy and paste. Every suggestion is reviewed, retyped, adapted,
-                and often refactored entirely. AI is a great accelerator — not a replacement for experience, judgment, or a good pair of eyes.
+                AI does not replace understanding or engineering judgment. I review and adapt what it produces, make the
+                implementation decisions myself, and remain responsible for the code I ship. For me, it is another tool
+                for solving problems more effectively.
             </Typography>
 
             <Typography variant="body2" sx={{ mt: 2, fontStyle: 'italic' }}>
-                Thanks for checking out the site — and for focusing on the craft that really counts.
+                Thank you for taking the time to look beyond the elephant!
             </Typography>
         </Box>
     );
