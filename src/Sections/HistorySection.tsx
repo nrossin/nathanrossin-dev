@@ -87,10 +87,12 @@ const HistorySection: React.FC = () => {
                                     <Typography variant="subtitle1" fontWeight="bold" color="text.secondary">
                                         {role.company}
                                     </Typography>
-                                    <Typography variant="subtitle2" sx={{fontStyle: 'italic'}}
-                                                color={theme.palette.text.secondary}>
-                                        ({role.department})
-                                    </Typography>
+                                    {role.department &&
+                                        <Typography variant="subtitle2" sx={{fontStyle: 'italic'}}
+                                                    color={theme.palette.text.secondary}>
+                                            ({role.department})
+                                        </Typography>
+                                    }
 
                                     <List dense>
                                         {role.description.map((item, idx) => (
