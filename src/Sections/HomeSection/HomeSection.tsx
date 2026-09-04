@@ -1,7 +1,7 @@
-import { Avatar, Box, IconButton, Link, Typography, useMediaQuery, useTheme } from '@mui/material';
+import {Avatar, Box, IconButton, Link, Typography, useMediaQuery, useTheme} from '@mui/material';
 import React from 'react';
 import techItemMapRaw from '../../data/techItemMap.json';
-import { TechItemMap } from '../../types/types.ts';
+import {TechItemMap} from '../../types/types.ts';
 import ElephantTrigger from '../../components/Elephant/ElephantTrigger.tsx'
 import SectionBox from '../SectionBox.tsx';
 import SkillsChart from './SkillsChart.tsx';
@@ -19,9 +19,9 @@ const HomeSection: React.FC = () => {
     return (
         <SectionBox id="home"
                     title="Hi, I'm Nathan"
-                    subtitle="Full-Stack Developer & Software Engineer"
+                    subtitle="Software Engineer | Full-Stack Application Development"
         >
-            <ElephantTrigger />
+            <ElephantTrigger/>
 
             <Box
                 display="flex"
@@ -43,13 +43,13 @@ const HomeSection: React.FC = () => {
                     <Box display="flex" justifyContent="center" gap={1} mt={1}>
                         <Link href="https://github.com/nrossin" target="_blank" rel="noopener" underline="none">
                             <IconButton color="primary" aria-label="GitHub Profile">
-                                <GitHubIcon fontSize="large" />
+                                <GitHubIcon fontSize="large"/>
                             </IconButton>
                         </Link>
                         <Link href="https://www.linkedin.com/in/nathan-rossin" target="_blank" rel="noopener"
                               underline="none">
                             <IconButton color="primary" aria-label="LinkedIn Profile">
-                                <LinkedInIcon fontSize="large" />
+                                <LinkedInIcon fontSize="large"/>
                             </IconButton>
                         </Link>
                     </Box>
@@ -57,22 +57,25 @@ const HomeSection: React.FC = () => {
 
                 {/*Welcome text column*/}
                 <Typography variant="body1" sx={{maxWidth: 600}}>
-                    Welcome! I am a seasoned full-stack developer with 10 years’ experience building web and desktop
-                    applications built in Java, JavaFX, React, and PHP.
+                    I am a software engineer with 10+ years of experience building web and desktop applications that
+                    solve real business problems.
                     <br /><br />
-                    I am skilled at translating business needs into clean, maintainable code and communicating technical
-                    solutions back to non-technical stakeholders and business owners.
+                    Much of my work has involved partnering directly with users, stakeholders, and technical teams to
+                    understand how a process works, identify opportunities for improvement, and turn those needs into
+                    practical software solutions.
                     <br /><br />
-                    I am an advocate for Linux operating systems and open-source software — recently building my own
-                    self-hosted servers utilizing Ubuntu Server, Docker, Cloudflare, and more.
+                    My experience includes Java, React, TypeScript, JavaScript, Node.js, PHP, SQL, Linux, and Docker,
+                    with a particular focus on full-stack application development, internal business applications, and
+                    business process automation.
                     <br /><br />
-                    Please feel free to check out my Projects below and let me know if you have any questions or
-                    comments!
+                    I enjoy taking software from an initial idea through design, development, deployment, and continued
+                    iteration, especially when I can work closely with the people who will actually use it.
+
                 </Typography>
             </Box>
 
             <Typography
-                variant="h5"
+                variant="h6"
                 sx={{
                     mt: 4,
                     mb: 4,
@@ -84,7 +87,7 @@ const HomeSection: React.FC = () => {
             </Typography>
 
             {/*Skills Section*/}
-            <SkillsChart techItemMap={techItemMap} isMobile={isMobile} />
+            <SkillsChart techItemMap={techItemMap} isMobile={isMobile}/>
 
         </SectionBox>
     );

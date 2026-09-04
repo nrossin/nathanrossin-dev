@@ -11,29 +11,15 @@ export interface WorkExperience {
 export const workHistory: WorkExperience[] = [
     {
         company: 'Michigan State University Federal Credit Union',
-        department: 'Enterprise Applications',
+        department: '',
         title: 'Software Engineer',
         startDate: 'July 2023',
         endDate: 'Present',
         duration: '',
         description: [
-            'Partnered with BAs, QE, and stakeholders to define clear acceptance criteria and edge cases — preventing ambiguous requirements and reducing rework.',
-            'Architected and maintained PHP, Java, and PowerOn microservices (banking-specific technology) that power lending, deposit, and online banking platforms for 350,000+ members daily.',
-            'Led the SymformPDF-to-PowerFrame Docs conversion project, documenting the process and delivering hands-on team training.',
-            'Promoted adherence to Agile practices and methodologies.'
-        ]
-    },
-    {
-        company: 'Farmers Insurance',
-        department: 'Central Support Services',
-        title: 'Application Developer',
-        startDate: 'January 2022',
-        endDate: 'July 2023',
-        duration: '1 year, 3 months',
-        description: [
-            'Built and deployed a React/Electron app supporting 12+ underwriters, improving data validation and compliance.',
-            'Built custom SharePoint sites with embedded Power Apps and Forms, reducing submission errors by streamlining form validation.',
-            'Established Git/GitHub strategies for branching, review, and deployment.',
+            'Develop and maintain PHP, Java, and PowerOn applications and services supporting lending, deposit, and online banking platforms serving 350,000+ members.',
+            'Partner with business analysts, quality engineers, and stakeholders to clarify requirements, acceptance criteria, and edge cases before implementation.',
+            'Led development standards and implementation planning during the team’s evaluation and partial migration from SymformPDF to PowerFrame Docs, defining conventions for code and form organization, documentation, and use of platform features.',
         ]
     },
     {
@@ -41,11 +27,15 @@ export const workHistory: WorkExperience[] = [
         department: 'Kraft Lake Insurance Agency',
         title: 'Application Developer',
         startDate: 'May 2016',
-        endDate: 'January 2022',
-        duration: '5 years, 8 months',
+        endDate: 'July 2023',
+        duration: '7 years, 2 months',
         description: [
-            'Developed a proprietary knowledge management system, supporting over 100 employees daily, accelerating service, document retrieval, and collaboration.',
-            'Engineered an Excess & Surplus Lines filings system—automating manual compliance workflows across all 50 states.',
+            'Expanded Rep Assist into a knowledge-management and workflow suite used daily by 50+ employees, initially replacing an Excel-based source of truth before growing to support additional business processes and tools.',
+            'Continuously evolved Rep Assist based on direct user feedback and firsthand experience with the underlying work.',
+            'Independently designed, built, and deployed a React/Electron desktop application used by 12+ E&S underwriters to automate state-specific policy tax and fee calculations.',
+            'Worked directly with underwriters throughout development to validate design decisions and iteratively improve workflows.',
+            'Designed and built an E&S state-filings manager covering state-specific workflows across all 50 states.',
+            'Built Power Apps and SharePoint-based tools to collect structured feedback from users of internally developed applications.',
             'Built ETL pipelines with Alteryx and SQL Server to consolidate fragmented policy data into a unified, queryable schema.',
         ]
     },
@@ -57,8 +47,8 @@ export const workHistory: WorkExperience[] = [
         endDate: 'May 2016',
         duration: '7 months',
         description: [
-            'Handled 30+ customer calls daily—fielded policy changes, billing inquiries and complaints, consistently exceeding SLA targets.',
-            'Conceived and prototyped a custom Java application to streamline and standardize documentation of customer interactions, which led to my transfer into a formal development role.'
+            'Conceived and built the original version of Rep Assist, a Java/JavaFX application designed to streamline and standardize customer-interaction documentation while working directly within the business process it was created to improve.',
+            'The project led to a transition into a formal application-development role.'
         ]
     },
     {
@@ -69,7 +59,6 @@ export const workHistory: WorkExperience[] = [
         endDate: 'October 2015',
         duration: '2 years, 1 month',
         description: [
-            'Kept records of customer interactions or transactions, recording details of inquiries, complaints, or comments, as well as actions taken.',
         ]
     }
 ];
